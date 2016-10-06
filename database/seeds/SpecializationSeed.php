@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Doctor\Models\Specialization;
 
 class SpecializationSeed extends Seeder
 {
@@ -21,10 +20,11 @@ class SpecializationSeed extends Seeder
             'CL'  => 'Clinica Odontológica',
             'LB'  => 'Laboratório'
         ];
-
+        $now = date("Y-m-d H:i:s");
+        
         foreach($contents as $k => $content){
-            $fields = [ 'name' => $content, 'nick_name' => $k ];
-            Specialization::create($fields);
+            $fields = [ 'name' => $content, 'nick_name' => $k, "created_at" => $now, "updated_at" => $now, ];
+            DB::table("specializations")->insert($fields);
         }
     }
 }
