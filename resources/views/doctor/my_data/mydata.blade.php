@@ -16,33 +16,33 @@
             <div class="box box-primary">
                 <!-- /.box-header -->
                 <!-- form start -->
-                {!! Form::open([ 'route' => 'doctor.store', 'name' => 'new-doctor', 'method' => 'post' ]) !!}
+                {!! Form::open([ 'route' => 'doctor::edit_profile', 'name' => 'new-doctor', 'method' => 'post' ]) !!}
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-6">
                                 {!! Form::label('number_cro', 'Número do CRO') !!}
-                                {!! Form::text('number_cro', '', ['class' => 'form-control', 'placeholder' => 'Número do CRO']) !!}
+                                {!! Form::text('number_cro', $doctor->number_cro, ['class' => 'form-control', 'placeholder' => 'Número do CRO']) !!}
                                 @if ($errors->has('number_cro'))
                                     <p class="text-danger">{!! $errors->first('number_cro') !!}</p>
                                 @endif
                             </div>
                             <div class="col-md-6">
                                 {!! Form::label('name', 'Nome Completo') !!}
-                                {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Nome Completo']) !!}
+                                {!! Form::text('name', $doctor->name, ['class' => 'form-control', 'placeholder' => 'Nome Completo']) !!}
                                 @if ($errors->has('name'))
                                     <p class="text-danger">{!! $errors->first('name') !!}</p>
                                 @endif
                             </div>
                             <div class="col-md-6">
                                 {!! Form::label('email', 'Email') !!}
-                                {!! Form::email('email', '', ['class' => 'form-control', 'placeholder' => 'Email']) !!}
+                                {!! Form::email('email', $doctor->email, ['class' => 'form-control', 'placeholder' => 'Email']) !!}
                                 @if ($errors->has('email'))
                                     <p class="text-danger">{!! $errors->first('email') !!}</p>
                                 @endif                                    
                             </div>
                             <div class="col-md-6">
                                 {!! Form::label('doc_cpf', 'CPF') !!}
-                                {!! Form::text('doc_cpf', '', ['class' => 'form-control', 'placeholder' => 'CPF', 'data-inputmask' =>'"mask": "999.999.999-99"', 'data-mask' => '']) !!}
+                                {!! Form::text('doc_cpf', $doctor->doc_cpf, ['class' => 'form-control', 'placeholder' => 'CPF', 'data-inputmask' =>'"mask": "999.999.999-99"', 'data-mask' => '']) !!}
                                 @if ($errors->has('doc_cpf'))
                                     <p class="text-danger">{!! $errors->first('doc_cpf') !!}</p>
                                 @endif    
@@ -60,21 +60,21 @@
                             </div>
                             <div class="col-md-3">
                                 {!! Form::label('office_hours', 'Horário de Atendimento') !!}
-                                {!! Form::text('office_hours', '', ['class' => 'form-control', 'placeholder' => 'Horário de Atendimento' ]) !!}
+                                {!! Form::text('office_hours', $doctor->office_hours, ['class' => 'form-control', 'placeholder' => 'Horário de Atendimento' ]) !!}
                                 @if ($errors->has('office_hours'))
                                     <p class="text-danger">{!! $errors->first('office_hours') !!}</p>
                                 @endif
                             </div>
                             <div class="col-md-3">
                                 {!! Form::label('phone', 'Telefone Comercial') !!}
-                                {!! Form::text('phone', '', ['class' => 'form-control', 'placeholder' => 'Telefone Comercial', 'data-inputmask' =>'"mask": "(99) 9999-9999"', 'data-mask' => '']) !!}
+                                {!! Form::text('phone', $doctor->phone, ['class' => 'form-control', 'placeholder' => 'Telefone Comercial', 'data-inputmask' =>'"mask": "(99) 9999-9999"', 'data-mask' => '']) !!}
                                 @if ($errors->has('phone'))
                                     <p class="text-danger">{!! $errors->first('phone') !!}</p>
                                 @endif
                             </div>
                             <div class="col-md-3">
                                 {!! Form::label('cell_phone', 'Celular') !!}
-                                {!! Form::text('cell_phone', '', ['class' => 'form-control', 'placeholder' => 'Celular', 'data-inputmask' =>'"mask": "(99) [9]9999-9999"', 'data-mask' => '']) !!}
+                                {!! Form::text('cell_phone', $doctor->cell_phone, ['class' => 'form-control', 'placeholder' => 'Celular', 'data-inputmask' =>'"mask": "(99) [9]9999-9999"', 'data-mask' => '']) !!}
                                 @if ($errors->has('cell_phone'))
                                     <p class="text-danger">{!! $errors->first('cell_phone') !!}</p>
                                 @endif
@@ -83,7 +83,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 {!! Form::label('zip_code', 'Cep') !!}
-                                {!! Form::text('zip_code', '', ['class' => 'form-control zip_code', 'placeholder' => 'Cep', 'data-inputmask' =>'"mask": "99999-999"', 'data-mask' => '']) !!}
+                                {!! Form::text('zip_code', $doctor->zip_code, ['class' => 'form-control zip_code', 'placeholder' => 'Cep', 'data-inputmask' =>'"mask": "99999-999"', 'data-mask' => '']) !!}
                                 @if ($errors->has('zip_code'))
                                     <p class="text-danger" id="zip">{!! $errors->first('zip_code') !!}</p>
                                 @endif
@@ -92,28 +92,28 @@
                         <div class="row">
                             <div class="col-md-10">
                                 {!! Form::label('address', 'Endereço') !!}
-                                {!! Form::text('address', '', ['class' => 'form-control', 'placeholder' => 'Endereço']) !!}
+                                {!! Form::text('address', $doctor->address, ['class' => 'form-control', 'placeholder' => 'Endereço']) !!}
                                 @if ($errors->has('address'))
                                     <p class="text-danger">{!! $errors->first('address') !!}</p>
                                 @endif
                             </div>
                             <div class="col-md-2">
                                 {!! Form::label('number', 'Número') !!}
-                                {!! Form::text('number', '', ['class' => 'form-control', 'placeholder' => 'Número']) !!}
+                                {!! Form::text('number', $doctor->number, ['class' => 'form-control', 'placeholder' => 'Número']) !!}
                                 @if ($errors->has('number'))
                                     <p class="text-danger">{!! $errors->first('number') !!}</p>
                                 @endif
                             </div>
                             <div class="col-md-6">
                                 {!! Form::label('es', 'Complemento') !!}
-                                {!! Form::text('complement', '', ['class' => 'form-control', 'placeholder' => 'Complemento']) !!}
+                                {!! Form::text('complement', $doctor->complement, ['class' => 'form-control', 'placeholder' => 'Complemento']) !!}
                                 @if ($errors->has('complement'))
                                     <p class="text-danger">{!! $errors->first('complement') !!}</p>
                                 @endif
                             </div>
                             <div class="col-md-6">
                                 {!! Form::label('neighborhood', 'Bairro') !!}
-                                {!! Form::text('neighborhood', '', ['class' => 'form-control', 'placeholder' => 'Bairro']) !!}
+                                {!! Form::text('neighborhood', $doctor->neighborhood, ['class' => 'form-control', 'placeholder' => 'Bairro']) !!}
                                 @if ($errors->has('neighborhood'))
                                     <p class="text-danger">{!! $errors->first('neighborhood') !!}</p>
                                 @endif

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Doctor\Http\Requests\DoctorRequest;
 use Doctor\Models\User;
 
+use Auth;
 
 class DoctorController extends Controller
 {
@@ -34,6 +35,16 @@ class DoctorController extends Controller
             'message' => $message,
             'code' => 400,
         ], 400);
+    }
+
+    public function profile()
+    {
+        $doctor = Auth::user();
+        if(!$doctor) {
+            $doctor = '';
+        }
+        
+        return view('doctor.my_data.mydata', ['page_title' => 'Meus Dados', 'doctor' => $doctor]);
     }
 
 }

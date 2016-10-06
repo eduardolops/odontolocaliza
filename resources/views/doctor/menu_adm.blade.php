@@ -4,7 +4,7 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <li class="header">Menu</li>
-            <li><a href="{!! route('doctor::profile') !!}"><i class="fa fa-users"></i><span>Meus Dados</span></a></li>
+            <li><a href="{!! route('doctor::edit_profile') !!}"><i class="fa fa-users"></i><span>Meus Dados</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
