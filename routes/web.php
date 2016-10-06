@@ -36,9 +36,9 @@ Route::group(['prefix' => 'doctor', 'as' => 'doctor::', 'middleware' => ['web', 
 	    'as' => 'edit_profile',
 	    'uses' => 'DoctorController@profile'
 	]);
-	Route::put('profile/', [
+	Route::post('profile/', [
 	    'as' => 'edit_profile',
-	    'uses' => 'DoctorController@profile'
+	    'uses' => 'DoctorController@profilepost'
 	]);
 
 });

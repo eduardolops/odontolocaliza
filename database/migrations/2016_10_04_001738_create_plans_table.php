@@ -17,8 +17,8 @@ class CreatePlansTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->float('price');
-            $table->string('time_plan');
-            $table->string('discount');
+            $table->string('time_plan')->nullable();
+            $table->string('discount')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

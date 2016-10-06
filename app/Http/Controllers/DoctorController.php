@@ -5,6 +5,9 @@ namespace Doctor\Http\Controllers;
 use Illuminate\Http\Request;
 use Doctor\Http\Requests\DoctorRequest;
 use Doctor\Models\User;
+use Doctor\Models\Specialization;
+use Doctor\Models\State;
+use Doctor\Models\City;
 
 use Auth;
 
@@ -43,8 +46,15 @@ class DoctorController extends Controller
         if(!$doctor) {
             $doctor = '';
         }
-        
-        return view('doctor.my_data.mydata', ['page_title' => 'Meus Dados', 'doctor' => $doctor]);
+        $specializations = Specialization::all();
+        $states = State::all();
+        $cities = City::all();
+        return view('doctor.my_data.mydata', ['page_title' => 'Meus Dados', 'doctor' => $doctor, 'specializations' => $specializations, 'states' => $states, 'cities' => $cities]);
     }
 
+
+    public function profilepost(Request $request)
+    {
+        dd($request);
+    }
 }

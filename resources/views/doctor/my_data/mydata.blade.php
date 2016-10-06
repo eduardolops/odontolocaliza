@@ -49,10 +49,11 @@
                             </div>
                             <div class="col-md-3">
                                 {!! Form::label('specialization', 'Especialidade') !!}
-                                <select name="specialization" class="form-control">
-                                    <option value="1">Teste</option>
-                                    <option value="2">Teste</option>
-                                    <option value="3">Teste</option>
+                                <select name="specialization[]" class="form-control" multiple>
+                                    <option value="">-- Selecione --</option>
+                                    @foreach($specializations as $specialization)
+                                        <option value="{!! $specialization->id !!}" {!! $specialization->id == $doctor->specialization ? 'selected' : '' !!}>{!! $specialization->name !!}</option>
+                                    @endforeach
                                 </select>
                                 @if ($errors->has('specialization'))
                                     <p class="text-danger">{!! $errors->first('specialization') !!}</p>
@@ -121,9 +122,10 @@
                             <div class="col-md-6">
                                 {!! Form::label('states', 'Estado') !!}
                                 <select name="states" class="form-control">
-                                    <option value="1">Teste</option>
-                                    <option value="2">Teste</option>
-                                    <option value="3">Teste</option>
+                                    <option value="">-- Selecione --</option>
+                                    @foreach($states as $state)
+                                        <option value="{!! $state->id !!}" {!! $state->id == $doctor->states ? 'selected' : '' !!}>{!! $state->name !!}</option>
+                                    @endforeach
                                 </select>
                                 @if ($errors->has('states'))
                                     <p class="text-danger">{!! $errors->first('states') !!}</p>
@@ -132,9 +134,10 @@
                             <div class="col-md-6">
                                 {!! Form::label('city', 'Cidade') !!}
                                 <select name="city" class="form-control">
-                                    <option value="1">Teste</option>
-                                    <option value="2">Teste</option>
-                                    <option value="3">Teste</option>
+                                    <option value="">-- Selecione --</option>
+                                    @foreach($cities as $city)
+                                        <option value="{!! $city->id !!}" {!! $city->id == $doctor->city ? 'selected' : '' !!}>{!! $city->name !!}</option>
+                                    @endforeach
                                 </select>
                                 @if ($errors->has('city'))
                                     <p class="text-danger">{!! $errors->first('city') !!}</p>

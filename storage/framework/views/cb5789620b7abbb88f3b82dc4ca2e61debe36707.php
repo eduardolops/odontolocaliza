@@ -58,10 +58,11 @@
                             <div class="col-md-3">
                                 <?php echo Form::label('specialization', 'Especialidade'); ?>
 
-                                <select name="specialization" class="form-control">
-                                    <option value="1">Teste</option>
-                                    <option value="2">Teste</option>
-                                    <option value="3">Teste</option>
+                                <select name="specialization[]" class="form-control" multiple>
+                                    <option value="">-- Selecione --</option>
+                                    <?php $__currentLoopData = $specializations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialization): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                                        <option value="<?php echo $specialization->id; ?>" <?php echo $specialization->id == $doctor->specialization ? 'selected' : ''; ?>><?php echo $specialization->name; ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                                 </select>
                                 <?php if($errors->has('specialization')): ?>
                                     <p class="text-danger"><?php echo $errors->first('specialization'); ?></p>
@@ -147,9 +148,10 @@
                                 <?php echo Form::label('states', 'Estado'); ?>
 
                                 <select name="states" class="form-control">
-                                    <option value="1">Teste</option>
-                                    <option value="2">Teste</option>
-                                    <option value="3">Teste</option>
+                                    <option value="">-- Selecione --</option>
+                                    <?php $__currentLoopData = $states; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $state): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                                        <option value="<?php echo $state->id; ?>" <?php echo $state->id == $doctor->states ? 'selected' : ''; ?>><?php echo $state->name; ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                                 </select>
                                 <?php if($errors->has('states')): ?>
                                     <p class="text-danger"><?php echo $errors->first('states'); ?></p>
@@ -159,9 +161,10 @@
                                 <?php echo Form::label('city', 'Cidade'); ?>
 
                                 <select name="city" class="form-control">
-                                    <option value="1">Teste</option>
-                                    <option value="2">Teste</option>
-                                    <option value="3">Teste</option>
+                                    <option value="">-- Selecione --</option>
+                                    <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                                        <option value="<?php echo $city->id; ?>" <?php echo $city->id == $doctor->city ? 'selected' : ''; ?>><?php echo $city->name; ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                                 </select>
                                 <?php if($errors->has('city')): ?>
                                     <p class="text-danger"><?php echo $errors->first('city'); ?></p>
