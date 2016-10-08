@@ -43,20 +43,71 @@ Route::group(['prefix' => 'doctor', 'as' => 'doctor::', 'middleware' => ['web', 
 
 });
 
-// Route::group(['prefix' => 'admin', 'as' => 'doctor::', 'middleware' => ['web', 'auth']], function(){
+Route::group(['prefix' => 'admin', 'as' => 'admin::', 'middleware' => ['web']], function(){
 
-// 	// Route::get('/',['as' => 'home_doctor', function(){
-// 	// 	return view('structures.admin_template');
-// 	// }]);
+	// Route::get('/',['as' => 'home_doctor', function(){
+	// 	return view('structures.admin_template');
+	// }]);
 
-// 	Route::get('',['as' => 'home_doctor', function(){
-// 		return view('doctor.home.index_home', ['page_title' => 'Home']);
-// 	}]);
+	Route::get('',['as' => 'home_admin', function(){
+		return view('admin.home.index_home', ['page_title' => 'Homes']);
+	}]);
 
-// 	Route::get('profile',['as' => 'profile', function(){
-// 		return view('doctor.my_data.mydata', ['page_title' => 'Meus Dados']);
-// 	}]);
+	Route::get('cities', [
+	    'as' => 'cities',
+	    'uses' => 'CitiesController@index'
+	]);
+	Route::get('cities/create', [
+	    'as' => 'cities.create',
+	    'uses' => 'CitiesController@create'
+	]);
+	Route::post('cities/create', [
+	    'as' => 'cities.stores',
+	    'uses' => 'CitiesController@store'
+	]);
+	Route::put('cities/{id}', [
+	    'as' => 'cities.update',
+	    'uses' => 'CitiesController@update'
+	]);
+	Route::get('cities/{id}/edit', [
+	    'as' => 'cities.show',
+	    'uses' => 'CitiesController@show'
+	]);
+	Route::delete('cities/{id}/delete', [
+	    'as' => 'cities.destroy',
+	    'uses' => 'CitiesController@destroy'
+	]);
 
-// });
+	Route::get('specializations', [
+	    'as' => 'specializations',
+	    'uses' => 'SpecializationController@index'
+	]);
+	Route::get('specializations/create', [
+	    'as' => 'specializations.create',
+	    'uses' => 'SpecializationController@create'
+	]);
+	Route::post('specializations/create', [
+	    'as' => 'specializations.stores',
+	    'uses' => 'SpecializationController@store'
+	]);
+	Route::put('specializations/{id}', [
+	    'as' => 'specializations.update',
+	    'uses' => 'SpecializationController@update'
+	]);
+	Route::get('specializations/{id}/edit', [
+	    'as' => 'specializations.show',
+	    'uses' => 'SpecializationController@show'
+	]);
+	Route::delete('specializations/{id}/delete', [
+	    'as' => 'specializations.destroy',
+	    'uses' => 'SpecializationController@destroy'
+	]);
+	
+
+	Route::get('health-insurance',['as' => 'health_insurance', function(){
+		return view('doctor.my_data.mydata', ['page_title' => 'Planos de Saúdes']);
+	}]);
+
+});
 
 Route::get('/home', 'HomeController@index');

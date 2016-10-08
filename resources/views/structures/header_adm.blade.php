@@ -2,7 +2,7 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{!! route('doctor::home_doctor') !!}" class="logo"><b>Odonto</b>localiza</a>
+    <a href="#" class="logo"><b>Odonto</b>localiza</a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
