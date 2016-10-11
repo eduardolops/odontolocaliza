@@ -22,9 +22,9 @@
         <?php endif; ?>
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Listagem das Cidades</h3>
+                <h3 class="box-title">Listagem dos Planos de Saúdes</h3>
                 <div class="box-tools">
-                    <a href="<?php echo route('admin::cities.create'); ?>" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Nova Cidade</a>
+                    <a href="<?php echo route('admin::health_insurance.create'); ?>" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Novo Plano de Saúde</a>
 
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <input type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
@@ -40,21 +40,21 @@
                 <table class="table table-hover">
                     <tr>
                         <th>ID</th>
-                        <th>Cidade</th>
+                        <th>Plano de Saúde</th>
                         <th>Ações</th>
                     </tr>
-                    <?php $__empty_1 = true; $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); $__empty_1 = false; ?>
+                    <?php $__empty_1 = true; $__currentLoopData = $health_insurances; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $health_insurance): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); $__empty_1 = false; ?>
                         <tr>
-                            <td><?php echo $city->id; ?></td>
-                            <td><?php echo $city->name; ?></td>
+                            <td><?php echo $health_insurance->id; ?></td>
+                            <td><?php echo $health_insurance->name; ?></td>
                             <td>
-                                <a href="<?php echo route('admin::cities.show', ['id' => $city->id]); ?>" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
-                                <a href="<?php echo route('admin::cities.destroy', ['id' => $city->id]); ?>" data-toggle="tooltip" data-placement="bottom" title="Excluir"
+                                <a href="<?php echo route('admin::health_insurance.show', ['id' => $health_insurance->id]); ?>" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
+                                <a href="<?php echo route('admin::health_insurance.destroy', ['id' => $health_insurance->id]); ?>" data-toggle="tooltip" data-placement="bottom" title="Excluir"
                                     onclick="event.preventDefault();
-                                             document.getElementById('cities.destroy.<?php echo $city->id; ?>').submit();">
+                                             document.getElementById('health_insurance.destroy.<?php echo $health_insurance->id; ?>').submit();">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                                <?php echo Form::open([ 'route' => ['admin::cities.destroy', $city->id], 'id' => 'cities.destroy.'.$city->id, 'method' => 'delete' ]); ?>
+                                <?php echo Form::open([ 'route' => ['admin::health_insurance.destroy', $health_insurance->id], 'id' => 'health_insurance.destroy.'.$health_insurance->id, 'method' => 'delete' ]); ?>
 
                                 <?php echo Form::close(); ?>
 

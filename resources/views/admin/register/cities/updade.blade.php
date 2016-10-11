@@ -8,9 +8,16 @@
 <!-- /.row -->
 <div class="row">
     <div class="col-md-12">
-        @if (session('status'))
+       @if (session('status'))
             <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 {{ session('status') }}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger">
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{ session('error') }}
             </div>
         @endif
         <!-- general form elements -->
@@ -46,7 +53,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    {!! Form::submit('Cadastrar',['class' => 'btn btn-primary']) !!}
+                    {!! Form::submit('Salvar',['class' => 'btn btn-primary']) !!}
                 </div>
             {!! Form::close() !!}
         </div>

@@ -1,3 +1,4 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <link href="{{ asset("/bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
 <div class="col-md-12 row"> <br><br>
         @if (session('status'))
@@ -163,3 +164,22 @@
                 {!! Form::close() !!}
             </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $('input[name="number_cro"]').on('blur', function(){
+            var cro = $(this).val();
+            $.ajax({
+                method: 'POST',
+                data: { cro: cro },
+                url: '{!! route('doctor.search_cro') !!}',
+                success: function(data){
+                    console.log(data);
+                }
+            });
+        });
+    </script>

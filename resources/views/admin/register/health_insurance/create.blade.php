@@ -24,21 +24,12 @@
         <div class="box box-primary">
             <!-- /.box-header -->
             <!-- form start -->
-            {!! Form::open([ 'route' => 'admin::specializations.create',  'name' => 'specializations', 'method' => 'post' ]) !!}
+            {!! Form::open([ 'route' => 'admin::health_insurance.create',  'name' => 'health_insurance', 'method' => 'post' ]) !!}
                 <div class="box-body">
                     <div class="row">
                         <div class="col-md-6">
-                            {!! Form::label('nick_name', 'Sigla Especialização') !!}
-                            {!! Form::text('nick_name', '', ['class' => 'form-control', 'placeholder' => 'Sigla Especialização']) !!}
-                            @if ($errors->has('nick_name'))
-                                <p class="text-danger">{!! $errors->first('nick_name') !!}</p>
-                            @endif
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            {!! Form::label('name', 'Especialização') !!}
-                            {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Especialização']) !!}
+                            {!! Form::label('name', 'Plano de Saúde') !!}
+                            {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Plano de Saúde']) !!}
                             @if ($errors->has('name'))
                                 <p class="text-danger">{!! $errors->first('name') !!}</p>
                             @endif

@@ -57,4 +57,39 @@ class DoctorController extends Controller
     {
         dd($request);
     }
+
+    public function searchCRO(Request $request)
+    {
+        $cro = '';
+        if( !empty($request->input('cro')) ):
+            $cro = $request->input('cro');
+        endif;
+
+        $curl  = 'http://www.consultacrm.com.br/api/';
+        $param = [
+                    'tipo'    => 'cro',
+                    'q'       => $cro,
+                    'chave'   => '',
+                    'destino' => 'xml' 
+                ];
+
+        try {
+            
+            $response    = Curl::to($curl)->withData($param)->get();
+            $responseXML = simplexml_load_string($response);
+
+            return response()->json([
+                'data' => $responseXML,
+                'code' => 200,
+            ], 200);
+
+        } catch (\Exception $e) {
+            $messege = $e->getMessage();
+        }
+
+        return response()->json([
+            'message' => $message,
+            'code' => 400,
+        ], 400);
+    }
 }

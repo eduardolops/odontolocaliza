@@ -166,7 +166,8 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Ixudra\Curl\CurlServiceProvider::class,
+        // 'Kozz\Laravel\Providers\Guzzle',
         //
 
         /*
@@ -229,6 +230,9 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Curl' => Ixudra\Curl\Facades\Curl::class,
+        // 'Guzzle' => 'Kozz\Laravel\Facades\Guzzle'
+        
 
     ],
 

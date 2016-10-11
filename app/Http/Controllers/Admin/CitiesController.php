@@ -1,7 +1,8 @@
 <?php
 
-namespace Doctor\Http\Controllers;
+namespace Doctor\Http\Controllers\Admin;
 
+use Doctor\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Doctor\Http\Requests\CitiesRequest;
 use Doctor\Models\State;
@@ -56,7 +57,7 @@ class CitiesController extends Controller
         return view('admin.register.cities.updade', ['page_title' => 'Cidades', 'states' => $states, 'city' => $city]);   
     }
 
-    public function update($id, Request $request)
+    public function update($id, CitiesRequest $request)
     {
         $city = $this->cities->find($id);
         if(!$city) {
@@ -85,7 +86,7 @@ class CitiesController extends Controller
 
         try {
             $city->delete();
-            return redirect()->route('admin::cities') //->with('status', 'Cidade deletada com sucesso!');
+            return redirect()->route('admin::cities'); //->with('status', 'Cidade deletada com sucesso!');
         } catch(\Exception $e) {
             $message = $e->getMessage();
         }

@@ -8,7 +8,7 @@
                 <a href="#"> <i class="fa fa-users"></i><span>Cadastrar</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                      <li><a href="<?php echo route('admin::cities'); ?>"><i class="fa fa-users"></i><span>Cidades</span></a></li>
-                     <li><a href="<?php echo route('admin::specialization'); ?>"><i class="fa fa-users"></i><span>Especializações</span></a></li>
+                     <li><a href="<?php echo route('admin::specializations'); ?>"><i class="fa fa-users"></i><span>Especializações</span></a></li>
                      <li><a href="<?php echo route('admin::health_insurance'); ?>"><i class="fa fa-users"></i><span>Planos de Saúde</span></a></li>
                 </ul>
             </li>

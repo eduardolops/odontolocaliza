@@ -6,7 +6,7 @@
 <!-- /.row -->
 <div class="row">
     <div class="col-md-12">
-       <?php if(session('status')): ?>
+        <?php if(session('status')): ?>
             <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <?php echo e(session('status')); ?>
@@ -24,29 +24,25 @@
         <div class="box box-primary">
             <!-- /.box-header -->
             <!-- form start -->
-            <?php echo Form::open([ 'route' => ['admin::cities.update', $city->id], 'name' => 'cities', 'method' => 'put' ]); ?>
+            <?php echo Form::open([ 'route' => 'admin::specializations.create',  'name' => 'specializations', 'method' => 'post' ]); ?>
 
                 <div class="box-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <?php echo Form::label('states', 'Estado'); ?>
+                            <?php echo Form::label('nick_name', 'Sigla Especialização'); ?>
 
-                            <select name="id_state" class="form-control">
-                                <option value="">-- Selecione --</option>
-                                <?php $__currentLoopData = $states; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $state): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-                                    <option value="<?php echo $state->id; ?>" <?php echo $state->id == $city->id_state ? 'selected' : ''; ?>><?php echo $state->name; ?></option>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
-                            </select>
-                            <?php if($errors->has('id_state')): ?>
-                                <p class="text-danger"><?php echo $errors->first('id_state'); ?></p>
+                            <?php echo Form::text('nick_name', '', ['class' => 'form-control', 'placeholder' => 'Sigla Especialização']); ?>
+
+                            <?php if($errors->has('nick_name')): ?>
+                                <p class="text-danger"><?php echo $errors->first('nick_name'); ?></p>
                             <?php endif; ?>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <?php echo Form::label('name', 'Cidade'); ?>
+                            <?php echo Form::label('name', 'Especialização'); ?>
 
-                            <?php echo Form::text('name', $city->name, ['class' => 'form-control', 'placeholder' => 'Cidade']); ?>
+                            <?php echo Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Especialização']); ?>
 
                             <?php if($errors->has('name')): ?>
                                 <p class="text-danger"><?php echo $errors->first('name'); ?></p>
@@ -57,7 +53,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <?php echo Form::submit('Salvar',['class' => 'btn btn-primary']); ?>
+                    <?php echo Form::submit('Cadastrar',['class' => 'btn btn-primary']); ?>
 
                 </div>
             <?php echo Form::close(); ?>

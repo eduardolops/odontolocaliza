@@ -22,9 +22,9 @@
         <?php endif; ?>
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Listagem das Cidades</h3>
+                <h3 class="box-title">Listagem das Especializações</h3>
                 <div class="box-tools">
-                    <a href="<?php echo route('admin::cities.create'); ?>" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Nova Cidade</a>
+                    <a href="<?php echo route('admin::specializations.create'); ?>" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Nova Especialização</a>
 
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <input type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
@@ -40,21 +40,23 @@
                 <table class="table table-hover">
                     <tr>
                         <th>ID</th>
-                        <th>Cidade</th>
+                        <th>Especialização</th>
+                        <th>Sigla</th>
                         <th>Ações</th>
                     </tr>
-                    <?php $__empty_1 = true; $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); $__empty_1 = false; ?>
+                    <?php $__empty_1 = true; $__currentLoopData = $specializations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialization): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); $__empty_1 = false; ?>
                         <tr>
-                            <td><?php echo $city->id; ?></td>
-                            <td><?php echo $city->name; ?></td>
+                            <td><?php echo $specialization->id; ?></td>
+                            <td><?php echo $specialization->name; ?></td>
+                            <td><?php echo $specialization->nick_name; ?></td>
                             <td>
-                                <a href="<?php echo route('admin::cities.show', ['id' => $city->id]); ?>" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
-                                <a href="<?php echo route('admin::cities.destroy', ['id' => $city->id]); ?>" data-toggle="tooltip" data-placement="bottom" title="Excluir"
+                                <a href="<?php echo route('admin::specializations.show', ['id' => $specialization->id]); ?>" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
+                                <a href="<?php echo route('admin::specializations.destroy', ['id' => $specialization->id]); ?>" data-toggle="tooltip" data-placement="bottom" title="Excluir"
                                     onclick="event.preventDefault();
-                                             document.getElementById('cities.destroy.<?php echo $city->id; ?>').submit();">
+                                             document.getElementById('specialization.destroy.<?php echo $specialization->id; ?>').submit();">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                                <?php echo Form::open([ 'route' => ['admin::cities.destroy', $city->id], 'id' => 'cities.destroy.'.$city->id, 'method' => 'delete' ]); ?>
+                                <?php echo Form::open([ 'route' => ['admin::specializations.destroy', $specialization->id], 'id' => 'specialization.destroy.'.$specialization->id, 'method' => 'delete' ]); ?>
 
                                 <?php echo Form::close(); ?>
 

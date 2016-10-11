@@ -22,9 +22,9 @@
         @endif
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Listagem das Cidades</h3>
+                <h3 class="box-title">Listagem dos Planos de Saúdes</h3>
                 <div class="box-tools">
-                    <a href="{!! route('admin::cities.create') !!}" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Nova Cidade</a>
+                    <a href="{!! route('admin::health_insurance.create') !!}" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Novo Plano de Saúde</a>
 
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <input type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
@@ -40,21 +40,21 @@
                 <table class="table table-hover">
                     <tr>
                         <th>ID</th>
-                        <th>Cidade</th>
+                        <th>Plano de Saúde</th>
                         <th>Ações</th>
                     </tr>
-                    @forelse($cities as $city)
+                    @forelse($health_insurances as $health_insurance)
                         <tr>
-                            <td>{!! $city->id !!}</td>
-                            <td>{!! $city->name !!}</td>
+                            <td>{!! $health_insurance->id !!}</td>
+                            <td>{!! $health_insurance->name !!}</td>
                             <td>
-                                <a href="{!! route('admin::cities.show', ['id' => $city->id]) !!}" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
-                                <a href="{!! route('admin::cities.destroy', ['id' => $city->id]) !!}" data-toggle="tooltip" data-placement="bottom" title="Excluir"
+                                <a href="{!! route('admin::health_insurance.show', ['id' => $health_insurance->id]) !!}" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
+                                <a href="{!! route('admin::health_insurance.destroy', ['id' => $health_insurance->id]) !!}" data-toggle="tooltip" data-placement="bottom" title="Excluir"
                                     onclick="event.preventDefault();
-                                             document.getElementById('cities.destroy.{!! $city->id !!}').submit();">
+                                             document.getElementById('health_insurance.destroy.{!! $health_insurance->id !!}').submit();">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                                {!! Form::open([ 'route' => ['admin::cities.destroy', $city->id], 'id' => 'cities.destroy.'.$city->id, 'method' => 'delete' ]) !!}
+                                {!! Form::open([ 'route' => ['admin::health_insurance.destroy', $health_insurance->id], 'id' => 'health_insurance.destroy.'.$health_insurance->id, 'method' => 'delete' ]) !!}
                                 {!! Form::close() !!}
                                 </form>
                             </td>
