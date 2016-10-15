@@ -59,7 +59,7 @@ Route::group(['prefix' => 'doctor', 'as' => 'doctor::', 'middleware' => ['web', 
 
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin::', 'middleware' => ['web']], function(){
+Route::group(['prefix' => 'admin', 'as' => 'admin::', 'middleware' => ['web', 'admin.auth']], function(){
 
 	// Route::get('/',['as' => 'home_doctor', function(){
 	// 	return view('structures.admin_template');
