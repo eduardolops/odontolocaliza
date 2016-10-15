@@ -69,17 +69,17 @@ class DoctorController extends Controller
         $param = [
                     'tipo'    => 'cro',
                     'q'       => $cro,
-                    'chave'   => '',
-                    'destino' => 'xml' 
+                    'chave'   => '4086218239',
+                    'destino' => 'json' 
                 ];
 
         try {
             
             $response    = Curl::to($curl)->withData($param)->get();
-            $responseXML = simplexml_load_string($response);
-
+            // $responseXML = simplexml_load_string($response);
+            dd($response);
             return response()->json([
-                'data' => $responseXML,
+                'data' => $response,
                 'code' => 200,
             ], 200);
 

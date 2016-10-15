@@ -12,16 +12,19 @@
 */
 
 Route::get('/', function () {
-	$response = Curl::to('http://www.consultacrm.com.br/api/')
-                            ->withData([
-                                'tipo'    => 'cro',
-                                'q'       => '123632234567',
-                                'chave'   => '',
-                                'destino' => 'xml' 
-                            ])->get();
+	// $response = Curl::to('http://www.consultacrm.com.br/api/')
+ //                            ->withData([
+ //                                'tipo'    => 'cro',
+ //                                'q'       => 'SILVANI CAMPOS',
+ //                                'uf'      => 'BA',
+ //                                'chave'   => '4086218239',
+ //                                'destino' => 'json' 
+ //                            ])->get();
+    $response = Curl::to('http://cfo.org.br/servicos-e-consultas/Profissionais/?nome=&inscricao=15294&cro=BA&categoria=CD&codigo=&enviar=Enviar')->get(); 
+	echo '<pre>';
 	dd($response);
-    return $response;// view('welcome');
-    // return view('welcome');
+	
+    return view('welcome');
 });
 
 Auth::routes();
