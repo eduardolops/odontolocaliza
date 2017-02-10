@@ -14,13 +14,19 @@ class PlanSeed extends Seeder
         $now = date("Y-m-d H:i:s");
         DB::table("plans")->insert([
             [
-                "name"       => "Plano Start",
+                "name"       => "Plano Basico",
+                "identifier" => "plano_basico",
                 "price"      => 29.99,
-                "time_plan"  => '1',
-                "discount"   => 0,
                 "created_at" => $now,
                 "updated_at" => $now,
-            ]
+            ],
+            [
+                "name"       => "Plano Premium",
+                "identifier" => "plano_premium",
+                "price"      => 34.99,
+                "created_at" => $now,
+                "updated_at" => $now,
+            ],
         ]);
     }
 }

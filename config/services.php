@@ -35,4 +35,11 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'iugu' => [
+        'model'  => Doctor\User::class,
+        'key' => env('IUGU_APIKEY'),
+        'account_id' => env('IUGU_ACCOUNT_ID'),
+        'signature_table' => env('GUPAYMENT_SIGNATURE_TABLE')
+    ],
+
 ];

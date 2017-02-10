@@ -5,11 +5,11 @@ namespace Doctor\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
+use Doctor\Supports\Subscription\SubscriptionTrait;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-
+    use Notifiable, SubscriptionTrait;
     /**
      * The attributes that are mass assignable.
      *
@@ -18,7 +18,10 @@ class User extends Authenticatable
     protected $fillable = [
             'name','number_cro','doc_cpf','email','password','zip_code','address',
             'number','neighborhood','complement','states','city','country','phone',
-            'cell_phone','specialization', 'office_hours'
+            'cell_phone','office_hours', 'social_facebook', 'social_twitter', 'social_instagran',
+            'social_gplus', 'thumb',
+            'expires_at', 'trial_ends_at', 'customer_id', 'subscription_id',
+            'subscription_plan', 'subscription_active', 'subscription_suspended', 'terms_use'
     ];
 
     /**
@@ -37,5 +40,37 @@ class User extends Authenticatable
     public function setPasswordAttribute($password)
     {   
         $this->attributes['password'] = Hash::make($password);
+    }
+
+    public function gallery()
+    {
+        return $this->hasMany(Image::class, 'user_id', 'id');
+    }
+
+    public function link()
+    {
+        return $this->hasMany(Link::class, 'user_id', 'id');
+    }
+
+    public function specializations()
+    {
+        return $this->hasMany(SpecializationDoctor::class, 'user_id');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Shopping::class, 'id_doctor');
+    }
+
+
+    /**
+     * Mark the subscription as cancelled.
+     *
+     * @return void
+     */
+    public function markAsCancelled()
+    {
+        $this->fill(['subscription_suspended' => 1])->save();
+        $this->loadSubscription();
     }
 }

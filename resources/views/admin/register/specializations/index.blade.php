@@ -22,17 +22,18 @@
         @endif
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Listagem das Especializações</h3>
-                <div class="box-tools">
+                <h3 class="box-title">Listagem</h3>
+                <div class="box-tools" style="width: 300px;">
                     <a href="{!! route('admin::specializations.create') !!}" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Nova Especialização</a>
 
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
-
-                        <div class="input-group-btn">
-                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    {!! Form::open([ 'route' => ['admin::specializations'], 'method' => 'get']) !!}
+                        <div class="input-group input-group-sm pull-left" style="width: 150px;">
+                            <input type="text" name="search" class="form-control pull-right" placeholder="Pesquisar">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            </div>
                         </div>
-                    </div>
+                    {!! Form::close() !!}
                 </div>
             </div>
             <!-- /.box-header -->
@@ -68,6 +69,9 @@
                     @endforelse
 
                 </table>
+                <div style="text-align:center">
+                    {!! $specializations->appends(['search' => request()->search])->links() !!}
+                </div>
             </div>
             <!-- /.box-body -->
         </div>

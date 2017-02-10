@@ -17,15 +17,22 @@ class SpecializationController extends Controller
         $this->specializations = $specialization;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $specializations = $this->specializations->all();
-    	return view('admin.register.specializations.index', ['page_title' => 'Especializações', 'specializations' => $specializations]);
+        $role = $request->input('search');
+
+        $specializations = $this->specializations
+                                ->where(function($query) use($role){
+                                    if($role):
+                                        $query->where('name','like','%'.$role.'%');
+                                    endif;
+                                })->paginate(15);
+    	return view('admin.register.specializations.index', ['page_title' => 'Especializações', 'specializations' => $specializations, 'guard' => 'admin']);
     }
 
     public function create()
     {
-        return view('admin.register.specializations.create', ['page_title' => 'Especializações']);   
+        return view('admin.register.specializations.create', ['page_title' => 'Especializações', 'guard' => 'admin']);
     }
 
     public function store(SpecializationsRequest $request)
@@ -49,7 +56,9 @@ class SpecializationController extends Controller
         if(!$specialization){
             return redirect()->route('admin::specializations');
         }
-        return view('admin.register.specializations.updade', ['page_title' => 'Cidades', 'specialization' => $specialization]);   
+        $page_title = 'Editar: '.title_case($specialization->name);
+        $guard = 'admin';
+        return view('admin.register.specializations.updade', compact( 'page_title', 'specialization', 'guard' ));   
     }
 
     public function update($id, SpecializationsRequest $request)

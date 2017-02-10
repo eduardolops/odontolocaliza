@@ -23,20 +23,20 @@ class CitiesController extends Controller
     public function index()
     {
         $cities = $this->cities->all();
-    	return view('admin.register.cities.index', ['page_title' => 'Cidades', 'cities' => $cities]);
+    	return view('admin.register.cities.index', ['page_title' => 'Cidades', 'cities' => $cities, 'guard' => 'admin']);
     }
 
     public function create()
     {
         $states = $this->states->all(); 
-        return view('admin.register.cities.create', ['page_title' => 'Cidades', 'states' => $states]);   
+        return view('admin.register.cities.create', ['page_title' => 'Cidades', 'states' => $states, 'guard' => 'admin']);   
     }
 
     public function store(CitiesRequest $request)
     {
     	try{
     		$this->cities->create($request->all());
-    		return redirect()->route('admin::cities.create')->with('status', 'Cadastro realizado com sucesso!');
+    		return redirect()->route('admin::cities')->with('status', 'Cadastro realizado com sucesso!');
     	} catch(\Exception $e) {
             $message = $e->getMessage();
         }
@@ -54,7 +54,7 @@ class CitiesController extends Controller
             return redirect()->route('admin::cities');
         }
         $states = $this->states->all(); 
-        return view('admin.register.cities.updade', ['page_title' => 'Cidades', 'states' => $states, 'city' => $city]);   
+        return view('admin.register.cities.updade', ['page_title' => 'Cidades', 'states' => $states, 'city' => $city, 'guard' => 'admin']);   
     }
 
     public function update($id, CitiesRequest $request)

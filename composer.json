@@ -8,7 +8,11 @@
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
         "laravelcollective/html": "5.3.*", 
-        "ixudra/curl": "6.*"       
+        "ixudra/curl": "6.*",
+        "canducci/zipcode": "1.*",
+        "iugu/iugu": "^1.0",
+        "potelo/gu-payment": "^1.2",
+        "artesaos/seotools": "^0.10.0"    
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -23,8 +27,12 @@
         ],
         "psr-4": {
             "Doctor\\": "app/",
-            "Doctor\\Models\\": "app/Models/"
-        }
+            "Doctor\\Models\\": "app/Models/",
+            "Doctor\\Supports\\": "app/Supports/"
+        },
+        "files": [
+            "app/Helpers/helper.php"
+            ]   
     },
     "autoload-dev": {
         "classmap": [

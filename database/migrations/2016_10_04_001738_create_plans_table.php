@@ -16,9 +16,10 @@ class CreatePlansTable extends Migration
         Schema::create('plans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('identifier')->nullable();
             $table->float('price');
-            $table->string('time_plan')->nullable();
-            $table->string('discount')->nullable();
+            // $table->string('time_plan')->nullable();
+            // $table->string('discount')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

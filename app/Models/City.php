@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
-    protected $fillable = [ 'id_state', 'name' ];
+    protected $fillable = [ 'uf', 'name' ];
 
     // public function state()
     // {

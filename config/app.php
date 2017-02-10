@@ -167,7 +167,11 @@ return [
          * Package Service Providers...
          */
         Ixudra\Curl\CurlServiceProvider::class,
-        // 'Kozz\Laravel\Providers\Guzzle',
+        Canducci\ZipCode\Providers\ZipCodeServiceProvider::class,
+        Canducci\ZipCode\Providers\ZipCodeAddressServiceProvider::class,
+        Potelo\GuPayment\GuPaymentServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
         //
 
         /*
@@ -231,9 +235,10 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Curl' => Ixudra\Curl\Facades\Curl::class,
-        // 'Guzzle' => 'Kozz\Laravel\Facades\Guzzle'
+        'ZipCode'   => Canducci\ZipCode\Facades\ZipCode::class,
+        'Address'   => Canducci\ZipCode\Facades\ZipCodeAddress::class,
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         
-
     ],
 
 ];

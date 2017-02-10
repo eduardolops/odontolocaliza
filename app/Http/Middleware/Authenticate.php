@@ -26,13 +26,13 @@ class Authenticate
 
                 switch ($guard) {
                     case 'admin':
-                        $path = '/admin';
+                        $path = '/admin/login';
                         break;
                     default:
-                        $path = '/doctor';
+                        $path = '/login';
                         break;
                 }
-                return redirect()->guest($path.'/login');
+                return redirect()->guest($path);
             }
 
         }
