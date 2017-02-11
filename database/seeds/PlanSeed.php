@@ -16,14 +16,14 @@ class PlanSeed extends Seeder
             [
                 "name"       => "Plano Basico",
                 "identifier" => "plano_basico",
-                "price"      => 29.99,
+                "price"      => 29.90,
                 "created_at" => $now,
                 "updated_at" => $now,
             ],
             [
                 "name"       => "Plano Premium",
                 "identifier" => "plano_premium",
-                "price"      => 34.99,
+                "price"      => 34.90,
                 "created_at" => $now,
                 "updated_at" => $now,
             ],
