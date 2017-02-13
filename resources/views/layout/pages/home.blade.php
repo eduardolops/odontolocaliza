@@ -93,7 +93,7 @@
 	</div>
 	<div class="row owl_slider">
 		<div id="founder_slider">
-			@foreach($doctors as $doctor)
+			@forelse($doctors as $doctor)
 				<div class="item">
 					<div class="founder_member">
 						<div class="img_holder">
@@ -137,7 +137,24 @@
 						</div>
 					</div> <!-- /founder_member -->
 				</div>
-			@endforeach
+			@empty
+				@for($i=1; $i<=4; $i++)
+					<div class="item">
+						<div class="founder_member">
+							<div class="img_holder">
+	                            <img src="{{ asset('images/profile.jpg') }}" alt="Sem Imagem" class="img-responsive">
+								<div class="overlay transition3s">
+		                           	Usuário Teste
+								</div>
+							</div> <!-- /img_holder -->                       
+							<div class="text">
+								<h4>Usuário Teste</h4>
+								<span></span>
+							</div>
+						</div> <!-- /founder_member -->
+					</div>
+				@endfor
+			@endforelse
 		</div> <!-- /#founder_slider -->
 	</div> <!-- /owl_slider -->
 </section>

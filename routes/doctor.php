@@ -6,7 +6,7 @@
  **************************************/
 
 Route::get('',['as' => 'home_doctor', function(){
-	return view('doctor.home.index_home', ['page_title' => 'Home', 'guard' => 'web']);
+	return view('doctor.home.index_home', ['page_title' => 'Página Incial', 'guard' => 'web']);
 }]);
 
 # routes profile

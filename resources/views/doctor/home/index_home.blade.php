@@ -25,6 +25,30 @@
                     {{ session('warning') }}
                 </div>
             @endif
+            
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="box box-info box-solid">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Veja Bem Vindo</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <p>
+                                Complete o seu cadastrar para ter uma melhor divulgação, Acesse: Meus Dados/ Dados Pessoais
+                            </p>
+                            <p>
+                                Complete o seu cadastrar adicionando uma imagem de perfil (2M tamanho máximo permitido) adicione o seu horário de atendimento e telefones, coloque também suas redes socias, para se ter um contato maior com o seu paciente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 @stop

@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
             $table->string('office_hours')->nullable();
             $table->string('phone',50);
             $table->string('cell_phone',50);
+            $table->string('status',50)->default('pending');
             $table->string('thumb')->nullable();
             $table->date('expires_at')->nullable();
             $table->timestamp('trial_ends_at')->nullable();

@@ -12,13 +12,33 @@ class SpecializationSeed extends Seeder
     public function run()
     {
         $contents = [
-            'CD'  => 'Cirurgião Dentista',
-            'TPD' => 'Técnico em Prótese Dentaria',
-            'TSB' => 'Técnico em Saúde Bucal',
-            'ABS' => 'Auxiliar em Saúde Bucal',
-            'APD' => 'Auxiliar de Prótese Dentaria',
-            'CL'  => 'Clinica Odontológica',
-            'LB'  => 'Laboratório'
+            'CD'    => 'Cirurgião Dentista',
+            'TPD'   => 'Técnico em Prótese Dentaria',
+            'TSB'   => 'Técnico em Saúde Bucal',
+            'ABS'   => 'Auxiliar em Saúde Bucal',
+            'APD'   => 'Auxiliar de Prótese Dentaria',
+            'CL'    => 'Clinica Odontológica',
+            'LB'    => 'Laboratório'
+            'CTBMF' => 'Cirurgia e Traumatologia Buco Maxilo Facial',
+            'DD'    => 'Dentística',
+            'DTMD'  => 'Disfunção Têmporo Mandibular e Dor Orofacial',
+            'EDD'   => 'Endodontia',
+            'EL'    => 'Estomatologia',
+            'IRO'   => 'Imaginologia e Radiologia Odontológica',
+            'IP'    => 'Implantodontia',
+            'OL'    => 'Odontologia Legal',
+            'OT'    => 'Odontologia do Trabalho',
+            'OPNE'  => 'Odontologia para Pacientes com Necessidades Especiais',
+            'OTG'   => 'Odontogeriatria',
+            'OTP'   => 'Odontopediatria',
+            'OTA'   => 'Ortodontia',
+            'OFM'   => 'Ortopedia Funcional dos Maxilares',
+            'PB'    => 'Patologia Bucal',
+            'PO'    => 'Periodontia',
+            'PBMF'  => 'Prótese Buco Maxilo Facial',
+            'PD'    => 'Prótese Dentária',
+            'SC'    => 'Saúde Coletiva',
+
         ];
         $now = date("Y-m-d H:i:s");
         

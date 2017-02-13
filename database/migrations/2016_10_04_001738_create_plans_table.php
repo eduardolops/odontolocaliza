@@ -18,6 +18,7 @@ class CreatePlansTable extends Migration
             $table->string('name');
             $table->string('identifier')->nullable();
             $table->float('price');
+            $table->string('status',50)->default('inactive');
             // $table->string('time_plan')->nullable();
             // $table->string('discount')->nullable();
             $table->timestamps();
