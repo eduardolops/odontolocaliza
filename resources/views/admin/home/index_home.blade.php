@@ -5,5 +5,5 @@
 @stop
 
 @section('content')
-    home
+    home page
 @stop
