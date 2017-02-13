@@ -11,7 +11,6 @@
         "ixudra/curl": "6.*",
         "canducci/zipcode": "1.*",
         "iugu/iugu": "^1.0",
-        "potelo/gu-payment": "^1.2",
         "artesaos/seotools": "^0.10.0"    
     },
     "require-dev": {
