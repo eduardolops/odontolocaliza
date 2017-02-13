@@ -169,7 +169,7 @@ return [
         Ixudra\Curl\CurlServiceProvider::class,
         Canducci\ZipCode\Providers\ZipCodeServiceProvider::class,
         Canducci\ZipCode\Providers\ZipCodeAddressServiceProvider::class,
-        Potelo\GuPayment\GuPaymentServiceProvider::class,
+        // Potelo\GuPayment\GuPaymentServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         //
