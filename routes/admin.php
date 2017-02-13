@@ -121,6 +121,4 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	])->name('plan.destroy');
 
 
-
-
 }); # end route group auth.admin
