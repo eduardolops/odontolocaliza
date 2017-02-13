@@ -18,7 +18,7 @@ class SpecializationSeed extends Seeder
             'ABS'   => 'Auxiliar em Saúde Bucal',
             'APD'   => 'Auxiliar de Prótese Dentaria',
             'CL'    => 'Clinica Odontológica',
-            'LB'    => 'Laboratório'
+            'LB'    => 'Laboratório',
             'CTBMF' => 'Cirurgia e Traumatologia Buco Maxilo Facial',
             'DD'    => 'Dentística',
             'DTMD'  => 'Disfunção Têmporo Mandibular e Dor Orofacial',
