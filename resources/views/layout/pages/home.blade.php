@@ -64,17 +64,17 @@
 						<div class="text">
 							<div class="choose_reason item1">
 								<h5>Procurou</h5>
-								<p>Clique no campo procurar, para encontrar seu dentista</p>
+								<p>Clique no campo procurar, para encontrar seu dentista.</p>
 							</div> <!-- End .choose_reason -->
 
 							<div class="choose_reason item2">
 								<h5>Localizou</h5>
-								<p>Verifique a localização do dentista mais próximo de você</p>
+								<p>Verifique a localização do dentista mais próximo de você.</p>
 							</div> <!-- End .choose_reason -->
 					
 							<div class="choose_reason item3">
 								<h5>Agendou</h5>
-								<p>Entre em contato e agende sua consulta</p>
+								<p>Entre em contato e agende sua consulta.</p>
 							</div> <!-- End .choose_reason -->
 						</div> <!-- End .text -->
 					</div> <!-- End .opacity -->
