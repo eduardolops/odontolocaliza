@@ -10,10 +10,7 @@
 	      	</a>
 		     <button type="button" style="background-color:#33BBE8; margin-top: -20px;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 		       <span class="sr-only">Toggle navigation</span>
-		       {{-- <span class="icon-bar"></span>
-		       <span class="icon-bar"></span>
-		       <span class="icon-bar"></span> --}}
-		       <span style="color: #fff">menu</span>
+		       <span style="color:#fff">MENU</span>
 		     </button>
 		   </div>
 		   <!-- Collect the nav links, forms, and other content for toggling -->
