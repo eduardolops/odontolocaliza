@@ -49,6 +49,10 @@ class SiteController extends Controller
                               ->where( 'users.expires_at', '>=', date('Y-m-d') )
                               ->inRandomOrder()->get();
 
+        SEO::opengraph()->setUrl( url()->current() );
+        SEO::setCanonical( url()->current() );
+        SEO::opengraph()->addImage(['url' => asset('/images/banner/01.jpg'), 'size' => '300']);
+
         return view('layout.pages.home', compact( 'specializations', 'states', 'healths', 'doctors' ));
     }
 
