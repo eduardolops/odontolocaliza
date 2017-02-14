@@ -12,7 +12,7 @@
 					<a href="{!! url('login') !!}" class="btn button btn-block" style="color:#fff !important">Logar no Painel</a>
 				</li>
 				<li>
-					<a href="#register" class="btn button btn-block" style="color:#fff !important">Quero me Cadastrar</a>
+					<a href="{!! route('register') !!}" class="btn button btn-block" style="color:#fff !important">Quero me Cadastrar</a>
 				</li>
 			</ul>
 		</div>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-md-12 bg-blue-light">
                     <div class="pad">
-                        <p>No resultado ele encontra seus dados em destaque pelo <strong>Odontolocaliza</strong>.</p>
+                        <p>No resultado ele encontra seus dados em destaque pela <strong>Odontolocaliza</strong>.</p>
                         <p><i class="fa fa-check fa-2x" aria-hidden="true"></i></p>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
 <section class="jumbotron jumbotron-block">
     <div class="container">
         <div class="title">
-            <h3>Assine já e seja encontrado no maior site especializado em odontologia do Brasil</h3>
+            <h3>Assina já e faça parte do maior site especializado em busca de profissionais de odontologia do Brasil.</h3>
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4">
@@ -159,7 +159,9 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="text-center" style="margin-top:50px">
-                            <h4>Contrate qualquer um dos planos e tenha a sua disposição uma equipe qualificada para <strong> suporte técnico.</strong></h4>
+                            <h4>
+                            Contate qualquer um de nossos planos e tenha a sua disposição uma equipe qualificada para <strong>suporte técnico</strong>.
+                            </h4>
                         </div>
                     </div>
                 </div>
@@ -170,7 +172,7 @@
 <section class="jumbotron jumbotron-block">
     <div class="container">
         <div class="title">
-            <h3>Assine já e seja encontrado no maior site especializado em odontologia do Brasil</h3>
+            <h3>Assina já e faça parte do maior site especializado em busca de profissionais de odontologia do Brasil.</h3>
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4">
