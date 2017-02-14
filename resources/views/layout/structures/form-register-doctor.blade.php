@@ -168,7 +168,7 @@
     <div class="box-footer">
         <div class="row col-md-12">
             <div class="privacy-policy text-center" style="font-size: 12px; margin-top:30px">
-                  Ao clicar em "Cadastrar" confirmo estar de acordo com os <a href="#">Termos de Uso</a> da Odontolocaliza.
+                  Ao clicar em "Cadastrar" confirmo estar de acordo com os <a href="{{ asset('doc/termos-de-uso.pdf') }}" target="_blank">Termos de Uso</a> da Odontolocaliza.
             </div>
         </div>
         {!! Form::hidden('country', 1) !!}
