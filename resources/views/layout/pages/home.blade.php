@@ -17,7 +17,7 @@
 				<div class="single_item transition3s">
 					<div class="bg transition3s"><span class="icon icon-guia"></span></div>
 					<h4>Seu Guia</h4>
-					<p>O OdontoLocaliza é um Guia Odontológico Online onde você encontra os melhores profissionais odontológicos do Brasil.</p>						
+					<p>A OdontoLocaliza é um Guia Odontológico Online onde você encontra os melhores profissionais odontológicos do Brasil.</p>						
 				</div> <!-- End .single_item -->
 				<div class="single_item middle_item transition3s">
 					<div class="bg transition3s"><span class="icon icon-especialista"></span></div>
@@ -27,14 +27,14 @@
 				<div class="single_item transition3s">
 					<div class="bg transition3s"><span class="icon icon-qualificacao"></span></div>
 					<h4>Qualificação</h4>
-					<p>Como garantia de qualidade aqui você encontra apenas profissionais com Registro Válidos no CFO e CROSP.</p>
+					<p>Como garantia de qualidade aqui você encontra apenas profissionais com Registro Válidos no CFO e CRO's.</p>
 				</div> <!-- End .single_item -->
 			</div> <!-- End .practise_item -->
 			<div class="department_item">
 				<div class="single_item transition3s">
 					<div class="bg transition3s"><span class="icon icon-plano-odonto"></span></div>
 					<h4>Planos Odontológicos</h4>
-					<p>Se você já possui um plano odontológico fica ainda mais fácil de encontrar um profissional, basta nos informar.</p>	
+					<p>Se você já possui um plano odontológico fica ainda mais fácil encontrar um profissional, basta nos informar.</p>	
 				</div> <!-- End .single_item -->
 				<div class="single_item transition3s">
 					<div class="bg transition3s"><span class="icon icon-endereco"></span></div>

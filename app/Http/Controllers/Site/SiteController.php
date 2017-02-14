@@ -51,7 +51,7 @@ class SiteController extends Controller
 
         SEO::opengraph()->setUrl( url()->current() );
         SEO::setCanonical( url()->current() );
-        SEO::opengraph()->addImage(['url' => asset('/images/banner/01.jpg'), 'size' => '300']);
+        SEO::opengraph()->addImage(['url' => asset('/images/banner/02.jpg'), 'size' => '300']);
 
         return view('layout.pages.home', compact( 'specializations', 'states', 'healths', 'doctors' ));
     }
