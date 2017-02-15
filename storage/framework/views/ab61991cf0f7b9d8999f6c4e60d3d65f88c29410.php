@@ -66,7 +66,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-3">
                             <div class="footer-logo">
                                 <a href="<?php echo route('home'); ?>">
-                                    <img alt="Odontolocaliza - Seu Guia Odontológico"  src="<?php echo e(asset('images/logo/logo.png')); ?>" class="img-responsive">
+                                    <img alt="Odontolocaliza - Seu Guia Odontológico" src="<?php echo e(asset('images/logo/logo.png')); ?>" class="img-responsive">
                                 </a>
                             </div>
                         </div>
