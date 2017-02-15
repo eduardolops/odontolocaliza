@@ -49,7 +49,7 @@
     <div class="container">
         <?php echo Form::open([ 'route' => 'contact_store', 'name' => 'contact', 'method' => 'post' ]); ?>
 
-        <h4>Ficamos muito contentes com o seu contato, diga um olá para a Odontolocalza!</h4>
+        <h4>Ficamos muito contentes com o seu contato, diga um olá para a Odontolocaliza!</h4>
         <div class="input_wrapper row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 block_two">
                 <?php if(session('message')): ?>
