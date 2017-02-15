@@ -164,6 +164,7 @@ trait SubscriptionTrait
             if ($subscription) {
                 if ($subscription->expires_at) {
                     $this->expires_at = $subscription->expires_at;
+                    $this->status = 1;
                 }
                 $this->subscription_plan = $subscription->plan_identifier;
                 $this->subscription_active = $subscription->active;
