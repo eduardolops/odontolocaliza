@@ -13,12 +13,15 @@
 		       <span style="color:#fff">MENU</span>
 		     </button>
 		   </div>
+		   <?php 
+		   		$class = (Route::getCurrentRoute()->getName() === 'home') ? 'link' : '';
+		    ?>
 		   <!-- Collect the nav links, forms, and other content for toggling -->
 		   <div class="collapse navbar-collapse" id="navbar-collapse-1">
 		     <ul class="nav navbar-nav">
-		       <li><a href="<?php echo route('home'); ?>" class="transition-ease">Inicio</a></li>
-		       <li><a href="<?php echo route('about'); ?>" class="transition-ease">Sobre Nós</a></li>
-		       <li><a href="<?php echo route('contact'); ?>" class="transition-ease">Entre em Contato</a></li>
+		       <li><a href="<?php echo route('home'); ?>" class="<?php echo $class; ?> transition-ease">Inicio</a></li>
+		       <li><a href="<?php echo route('about'); ?>" class="<?php echo $class; ?> transition-ease">Sobre Nós</a></li>
+		       <li><a href="<?php echo route('contact'); ?>" class="<?php echo $class; ?> transition-ease">Entre em Contato</a></li>
 		       <li><a href="<?php echo route('sign'); ?>" class="transition-ease btn btn-primary btn-dentist">Sou Dentista</a></li>
 		     </ul>
 		   </div><!-- /.navbar-collapse -->

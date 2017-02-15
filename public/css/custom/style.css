@@ -388,6 +388,9 @@ header .nav {
     padding-left: 14px;
     position: relative;	
 }
+.navbar-default .navbar-nav .link{
+	color:#333;
+}
 
 .navbar-default .navbar-nav > li:hover > a,
 .navbar-default .navbar-nav > li > a:focus,
