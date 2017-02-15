@@ -57,11 +57,11 @@ function convertTypeStatus($status)
 {
     // 0 = inativo, 1 = ativo;
     switch ($status) {
-        case 1:
+        case 'active':
             $status = '<span class="label label-success">Ativo</span>';
             break;
         default:
-            $status = '<span class="label label-danger">Inativo</span>';
+            $status = '<span class="label label-warning">Pendentes</span>';
             break;
     }
 

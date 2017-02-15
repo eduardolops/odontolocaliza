@@ -21,8 +21,8 @@
                         <div class="form-group">
                             <select name="status" class="form-control input-sm">
                                 <option value="">Selecione Status</option>
-                                <option value="1">Ativos</option>
-                                <option value="0">Inativos</option>
+                                <option value="active">Ativos</option>
+                                <option value="pending">Pendentes</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-default btn-sm"><i class="fa fa-search"></i> Pesquisar</button>
@@ -61,7 +61,7 @@
 
                 </table>
                 <div style="text-align:center">
-                    {!! $doctors->links() !!}
+                    {!! $doctors->appends(['status' => request()->status])->links() !!}
                 </div>
             </div>
             <!-- /.box-body -->
