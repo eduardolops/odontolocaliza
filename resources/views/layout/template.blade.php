@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/bootstrap/bootstrap-multiselect.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/subscription-pricing.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/animate.min.css') }}">
+    <link href="{{ asset('css/custom/jquery.multiselect.css') }}" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
    		<script src="{{ asset('js/html5shiv.js') }}"></script>

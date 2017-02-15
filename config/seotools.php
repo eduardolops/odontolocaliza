@@ -9,7 +9,7 @@ return [
             'title'        => "Odontolocaliza - Seu Guia Odontológico", // set false to total remove
             'description'  => 'A Odontolocaliza é um Guia Odontológico Online, onde você encontra os melhores profissionais por atuação de Especialidades, Planos odontológicos e Cidades.', // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => ['dentista', 'odontologia', 'odontologico', 'dentes', 'doutor', 'saúde', 'saúde bucal'],
+            'keywords'     => ['dentista', 'odontologia', 'odontologico', 'dentes', 'doutor', 'saúde', 'saúde bucal', 'odonto', 'localiza'],
             'canonical'    => false, // Set null for using Url::current(), set false to total remove
         ],
 

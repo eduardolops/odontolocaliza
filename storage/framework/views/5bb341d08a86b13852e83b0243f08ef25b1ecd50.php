@@ -34,7 +34,8 @@
     <script src="<?php echo e(asset ("/vendor/input-mask/jquery.inputmask.extensions.js")); ?>"></script>
     <!-- Validation -->
     <script type="text/javascript" src="<?php echo e(asset('js/validate.js')); ?>"></script>
-    <script type="text/javascript" src="<?php echo e(asset('js/bootstrap-multiselect.js')); ?>"></script>
+    <script type="text/javascript" src="<?php echo e(asset('js/jquery.multiselect.js')); ?>"></script>
+    
     <script src="<?php echo e(asset('js/jquery.cookie.js')); ?>"></script>
     <script type="text/javascript" src="<?php echo e(asset('js/theme.js')); ?>"></script>
     <script src="<?php echo asset('assets/js/app-theme.js'); ?>"></script>

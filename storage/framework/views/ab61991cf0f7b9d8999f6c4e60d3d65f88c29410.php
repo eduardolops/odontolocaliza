@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo e(asset('css/bootstrap/bootstrap-multiselect.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/subscription-pricing.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/animate.min.css')); ?>">
+    <link href="<?php echo e(asset('css/custom/jquery.multiselect.css')); ?>" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
    		<script src="<?php echo e(asset('js/html5shiv.js')); ?>"></script>

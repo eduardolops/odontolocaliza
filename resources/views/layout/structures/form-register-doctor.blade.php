@@ -45,7 +45,7 @@
             </div>
             <div class="col-md-3">
                 {!! Form::label('healthinsurance', 'Planos Odontológicos Aceitos') !!}
-                <select name="healthinsurance[]" class="form-control" id="healthinsurance" multiple="multiple">
+                <select name="healthinsurance[]" class=ultraSelect form-control" id="healthinsurance" multiple="multiple">
                     @foreach($healths as $health)
                         <option value="{!! str_slug($health->name,'-').'-'.$health->id !!}">{!! $health->name !!}</option>
                     @endforeach
@@ -56,7 +56,7 @@
             </div>
             <div class="col-md-3">
                 {!! Form::label('specialization', 'Especialidade') !!}
-                <select name="specialization[]" class="form-control" id="specialization" multiple="multiple">
+                <select name="specialization[]" class=" form-control" id="specialization" multiple="multiple">
                     @foreach($specializations as $specialization)
                         <option value="{!! str_slug($specialization->name,'-').'-'.$specialization->id !!}">{!! $specialization->name !!}</option>
                     @endforeach
