@@ -29,9 +29,9 @@ class SiteController extends Controller
 
     public function home()
     {
-        $specializations = $this->specialization->all();
-        $healths = $this->healthInsurance->all();
-        $states  = State::all();
+        $specializations = $this->specialization->orderBy('name', 'asc')->get();
+        $healths = $this->healthInsurance->orderBy('name', 'asc')->get();
+        $states  = State::orderBy('name', 'asc')->get();
 
         $select = [
                     'users.*',

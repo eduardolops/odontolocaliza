@@ -10,7 +10,7 @@
     <meta name="distribution" content="Global" />
     <meta name="rating" content="General" />
     <meta name="revisit after" content="3 days" />
-    <meta name="author" content="<?php echo env('TITLE_SITE'); ?>" />
+    <meta name="author" content="Odontolocaliza" />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo e(asset('images/fav-icon/57x57.png')); ?>">
@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo e(asset('css/bootstrap/bootstrap-multiselect.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/subscription-pricing.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/animate.min.css')); ?>">
+    <link href="<?php echo e(asset('css/custom/jquery.multiselect.css')); ?>" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
    		<script src="<?php echo e(asset('js/html5shiv.js')); ?>"></script>
@@ -66,7 +67,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-3">
                             <div class="footer-logo">
                                 <a href="<?php echo route('home'); ?>">
-                                    <img alt="<?php echo env('TITLE_SITE', 'Odontolocaliza'); ?>" height="30" src="<?php echo e(asset('images/logo/logo.png')); ?>" class="img-responsive">
+                                    <img alt="Odontolocaliza - Seu Guia Odontológico" src="<?php echo e(asset('images/logo/logo.png')); ?>" class="img-responsive">
                                 </a>
                             </div>
                         </div>
@@ -75,10 +76,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
                             <ul class="nav-social">
                                 <li class="round_border transition3s">
-                                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/odontolocaliza/" target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li class="round_border transition3s">
-                                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/odontolocaliza" target="_blank"><i class="fa fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>

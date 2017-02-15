@@ -9,7 +9,7 @@
     <meta name="distribution" content="Global" />
     <meta name="rating" content="General" />
     <meta name="revisit after" content="3 days" />
-    <meta name="author" content="{!! env('TITLE_SITE') !!}" />
+    <meta name="author" content="Odontolocaliza" />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/fav-icon/57x57.png') }}">
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/bootstrap/bootstrap-multiselect.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/subscription-pricing.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/animate.min.css') }}">
+    <link href="{{ asset('css/custom/jquery.multiselect.css') }}" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
    		<script src="{{ asset('js/html5shiv.js') }}"></script>
@@ -65,7 +66,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-3">
                             <div class="footer-logo">
                                 <a href="{!! route('home') !!}">
-                                    <img alt="{!! env('TITLE_SITE', 'Odontolocaliza') !!}" height="30" src="{{ asset('images/logo/logo.png') }}" class="img-responsive">
+                                    <img alt="Odontolocaliza - Seu Guia Odontológico" src="{{ asset('images/logo/logo.png') }}" class="img-responsive">
                                 </a>
                             </div>
                         </div>
@@ -74,10 +75,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
                             <ul class="nav-social">
                                 <li class="round_border transition3s">
-                                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/odontolocaliza/" target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li class="round_border transition3s">
-                                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/odontolocaliza" target="_blank"><i class="fa fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>

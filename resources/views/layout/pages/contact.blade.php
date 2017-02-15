@@ -21,7 +21,7 @@
             </div>
             <!-- /icon -->
             <h6>Endereço</h6>
-            <p>60 City Center Ave. ADC 0708</p>
+            <p>Rua: Joubet Soares Marcondes, 322</p>
         </div>
         <!-- /single_info -->
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 single_info">
@@ -39,7 +39,7 @@
             </div>
             <!-- /icon -->
             <h6>Telefone</h6>
-            <p>(880) 1723801729</p>
+            <p>(18) 99635-0030</p>
         </div>
         <!-- /single_info -->
     </div>
