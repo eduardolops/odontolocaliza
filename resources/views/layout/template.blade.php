@@ -74,10 +74,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
                             <ul class="nav-social">
                                 <li class="round_border transition3s">
-                                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/odontolocaliza/" target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li class="round_border transition3s">
-                                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/odontolocaliza" target="_blank"><i class="fa fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>
