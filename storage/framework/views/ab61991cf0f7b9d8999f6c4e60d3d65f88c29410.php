@@ -10,7 +10,7 @@
     <meta name="distribution" content="Global" />
     <meta name="rating" content="General" />
     <meta name="revisit after" content="3 days" />
-    <meta name="author" content="<?php echo env('TITLE_SITE'); ?>" />
+    <meta name="author" content="Odontolocaliza" />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo e(asset('images/fav-icon/57x57.png')); ?>">
@@ -66,7 +66,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-3">
                             <div class="footer-logo">
                                 <a href="<?php echo route('home'); ?>">
-                                    <img alt="<?php echo env('TITLE_SITE', 'Odontolocaliza'); ?>" height="30" src="<?php echo e(asset('images/logo/logo.png')); ?>" class="img-responsive">
+                                    <img alt="Odontolocaliza - Seu Guia Odontológico"  src="<?php echo e(asset('images/logo/logo.png')); ?>" class="img-responsive">
                                 </a>
                             </div>
                         </div>
