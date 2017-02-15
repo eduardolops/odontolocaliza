@@ -146,10 +146,18 @@ select:focus{
     border:none;
 }   
 
+.information_area .single_info .icon {
+    background-color: #fff;
+    transition:all 0.3s ease;
+}
+.information_area .single_info .icon:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 .icon {
     width:60px;
-    background-color: #fff;
-    color:white;
     text-decoration:none;
 }
 .icon-guia:before{
