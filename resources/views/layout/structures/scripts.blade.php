@@ -34,7 +34,8 @@
     <script src="{{ asset ("/vendor/input-mask/jquery.inputmask.extensions.js") }}"></script>
     <!-- Validation -->
     <script type="text/javascript" src="{{ asset('js/validate.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap-multiselect.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.multiselect.js') }}"></script>
+    {{-- <script src="{{ asset('js/ultraselect.js') }}" type="text/javascript"></script> --}}
     <script src="{{ asset('js/jquery.cookie.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/theme.js') }}"></script>
     <script src="{!! asset('assets/js/app-theme.js') !!}"></script>

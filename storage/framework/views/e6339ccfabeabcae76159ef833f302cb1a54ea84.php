@@ -56,7 +56,7 @@
             <div class="col-md-3">
                 <?php echo Form::label('healthinsurance', 'Planos Odontológicos Aceitos'); ?>
 
-                <select name="healthinsurance[]" class="form-control" id="healthinsurance" multiple="multiple">
+                <select name="healthinsurance[]" class=ultraSelect form-control" id="healthinsurance" multiple="multiple">
                     <?php $__currentLoopData = $healths; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $health): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
                         <option value="<?php echo str_slug($health->name,'-').'-'.$health->id; ?>"><?php echo $health->name; ?></option>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
@@ -68,7 +68,7 @@
             <div class="col-md-3">
                 <?php echo Form::label('specialization', 'Especialidade'); ?>
 
-                <select name="specialization[]" class="form-control" id="specialization" multiple="multiple">
+                <select name="specialization[]" class=" form-control" id="specialization" multiple="multiple">
                     <?php $__currentLoopData = $specializations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialization): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
                         <option value="<?php echo str_slug($specialization->name,'-').'-'.$specialization->id; ?>"><?php echo $specialization->name; ?></option>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>

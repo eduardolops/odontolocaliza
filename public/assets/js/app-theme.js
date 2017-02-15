@@ -1,9 +1,19 @@
 $(function(){
-    $('#specialization').multiselect();
-    $('#healthinsurance').multiselect({
-        enableFiltering: true,
-        filterBehavior: 'value'
+    // $('#specialization').multiselect();
+    // $('#healthinsurance').multiselect({
+    //     enableFiltering: true,
+    //     filterBehavior: 'value'
+    // });
+    $('select[multiple]').multiselect({
+        search: true,
+        delay: 100,
+        texts: {
+            placeholder: '-- Selecione --',
+            search: 'Pesquisar',
+            selectedOptions: ' selecionado'
+        }
     });
+
     $('.carousel').carousel(); 
     $("[data-mask]").inputmask();
     
