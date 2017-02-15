@@ -1,8 +1,7 @@
 <?php
 
-namespace Doctor\Http\Controllers\Site;
+namespace Doctor\Http\Controllers;
 
-use Doctor\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Doctor\Http\Requests\UploadImageRequest;
 use Doctor\Models\User;

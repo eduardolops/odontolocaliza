@@ -160,7 +160,7 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div class="text-center" style="margin-top:50px">
                             <h4>
-                            Contate qualquer um de nossos planos e tenha a sua disposição uma equipe qualificada para <strong>suporte técnico</strong>.
+                            Contrate qualquer um de nossos planos e tenha a sua disposição uma equipe qualificada para <strong>suporte técnico</strong>.
                             </h4>
                         </div>
                     </div>

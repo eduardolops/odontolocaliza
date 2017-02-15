@@ -52,3 +52,18 @@ function convertStatusInTypeSituationPayment($order_status)
 
     return $status;
 }
+
+function convertTypeStatus($status)
+{
+    // 0 = inativo, 1 = ativo;
+    switch ($status) {
+        case 1:
+            $status = '<span class="label label-success">Ativo</span>';
+            break;
+        default:
+            $status = '<span class="label label-danger">Inativo</span>';
+            break;
+    }
+
+    return $status;
+}

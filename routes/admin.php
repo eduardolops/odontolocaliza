@@ -120,5 +120,18 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	    'uses' => 'Admin\PlansController@destroy'
 	])->name('plan.destroy');
 
-
+	#routes doctor's
+	Route::get('doctors', [
+		'uses' => 'Admin\DoctorsController@index'
+	])->name('doctors');
+	Route::put('doctors/{id}', [
+	    'uses' => 'Admin\DoctorsController@update'
+	])->name('doctors.update');
+	Route::get('doctors/{id}/edit', [
+	    'uses' => 'Admin\DoctorsController@show'
+	])->name('doctors.show');
+	Route::put('doctors/{id}/upload', [
+	    'uses' => 'UploadController@upload'
+	])->name('doctors.upload');
+	
 }); # end route group auth.admin
