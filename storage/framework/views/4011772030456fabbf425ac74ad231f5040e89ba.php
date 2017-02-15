@@ -28,7 +28,7 @@
             </div>
             <!-- /icon -->
             <h6>Email de Contato</h6>
-            <p>admin@yourdomain.com, yourname@gmail.com</p>
+            <p>contato@odontolocaliza.com</p>
         </div>
         <!-- /single_info -->
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 single_info">

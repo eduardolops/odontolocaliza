@@ -62,17 +62,17 @@
 						<div class="text">
 							<div class="choose_reason item1">
 								<h5>Procurou</h5>
-								<p>Clique no campo procurar, para encontrar seu dentista</p>
+								<p>Clique no campo procurar, para encontrar seu dentista.</p>
 							</div> <!-- End .choose_reason -->
 
 							<div class="choose_reason item2">
 								<h5>Localizou</h5>
-								<p>Verifique a localização do dentista mais próximo de você</p>
+								<p>Verifique a localização do dentista mais próximo de você.</p>
 							</div> <!-- End .choose_reason -->
 					
 							<div class="choose_reason item3">
 								<h5>Agendou</h5>
-								<p>Entre em contato e agende sua consulta</p>
+								<p>Entre em contato e agende sua consulta.</p>
 							</div> <!-- End .choose_reason -->
 						</div> <!-- End .text -->
 					</div> <!-- End .opacity -->
@@ -91,7 +91,7 @@
 	</div>
 	<div class="row owl_slider">
 		<div id="founder_slider">
-			<?php $__currentLoopData = $doctors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $doctor): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+			<?php $__empty_1 = true; $__currentLoopData = $doctors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $doctor): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); $__empty_1 = false; ?>
 				<div class="item">
 					<div class="founder_member">
 						<div class="img_holder">
@@ -135,7 +135,24 @@
 						</div>
 					</div> <!-- /founder_member -->
 				</div>
-			<?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); if ($__empty_1): ?>
+				<?php for($i=1; $i<=4; $i++): ?>
+					<div class="item">
+						<div class="founder_member">
+							<div class="img_holder">
+	                            <img src="<?php echo e(asset('images/profile.jpg')); ?>" alt="Sem Imagem" class="img-responsive">
+								<div class="overlay transition3s">
+		                           	Usuário Teste
+								</div>
+							</div> <!-- /img_holder -->                       
+							<div class="text">
+								<h4>Usuário Teste</h4>
+								<span></span>
+							</div>
+						</div> <!-- /founder_member -->
+					</div>
+				<?php endfor; ?>
+			<?php endif; ?>
 		</div> <!-- /#founder_slider -->
 	</div> <!-- /owl_slider -->
 </section>
