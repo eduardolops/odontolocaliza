@@ -57,7 +57,7 @@ class RegisterDoctorController extends Controller
 
         $specializations = $this->specialization->all();
         $healths = $this->healthInsurance->all();
-        $states  = State::all();
+        $states  = State::orderBy('name', 'asc')->get();
 
         return view('layout.pages.register', compact( 'states','specializations','healths' ));
     }

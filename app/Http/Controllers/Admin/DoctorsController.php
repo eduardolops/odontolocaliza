@@ -52,7 +52,7 @@ class DoctorsController extends Controller
     	endif;
 
     	$guard   = 'admin';
-    	$states  = State::all();
+    	$states  = State::orderBy('name', 'asc')->get();
         $cities  = City::all();
     	$doctor  = $this->doctor->findOrFail($id);
     	$page_title = 'Dr(a): '. title_case($doctor->name);
