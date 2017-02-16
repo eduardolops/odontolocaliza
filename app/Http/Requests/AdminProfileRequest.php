@@ -24,7 +24,23 @@ class AdminProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'         => 'required',
+            'password'     => 'required|min:6|confirmed',
+        ];
+    }
+
+     /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return  [
+            'name.required'         => 'Preencha o campo nome',
+            'password.required'     => 'Preencha o campo senha',
+            'password.min'          => 'A senha deve ter pelo menos :min caracteres',
+            'password.confirmed'     => 'A confirmação da senha não corresponde',
         ];
     }
 }
