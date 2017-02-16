@@ -19,6 +19,17 @@
                 <div class="pull-left">
                     <form class="form-inline">
                         <div class="form-group">
+                            <input type="text" name="doctor" class="form-control input-sm" placeholder="Nome do Doutor">
+                        </div>
+                        <div class="form-group">
+                            <select name="plan" class="form-control input-sm">
+                                <option value="">Selecione Plano</option>
+                                @foreach($plans as $plan)
+                                    <option value="{!! str_slug($plan->name, '_') !!}">{!! $plan->name !!}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <select name="status" class="form-control input-sm">
                                 <option value="">Selecione Status</option>
                                 <option value="active">Ativos</option>
@@ -50,7 +61,20 @@
                             <td>{!! $doctor->phone !!}</td>
                             <td>{!! date('d/m/Y H:i', strtotime($doctor->created_at)) !!}</td>
                             <td>
-                                <a href="{!! route('admin::doctors.show', ['id' => $doctor->id]) !!}" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
+                                <div class="btn-group">
+                                    <button class="btn btn-default btn-sm" onclick="window.open('{!! route('admin::doctors.logar', ['user_id' => $doctor->id]) !!}', '_blank');" >
+                                        <i class="fa fa-sign-in" aria-hidden="true"></i> Logar no Painel
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="{!! route('admin::doctors.show', ['id' => $doctor->id]) !!}"><i class="fa fa-edit"></i>Editar</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </td>
                         </tr>
                     @empty

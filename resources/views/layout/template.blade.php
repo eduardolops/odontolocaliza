@@ -63,7 +63,7 @@
                <div class="container">
                     <nav class="row ">
 
-                        <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="col-xs-12 col-sm-12 col-md-3 espacamento">
                             <div class="footer-logo">
                                 <a href="{!! route('home') !!}">
                                     <img alt="Odontolocaliza - Seu Guia Odontológico" src="{{ asset('images/logo/logo.png') }}" class="img-responsive">
@@ -72,13 +72,16 @@
                         </div>
 
 
-                        <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-2 espacamento">
                             <ul class="nav-social">
                                 <li class="round_border transition3s">
-                                    <a href="https://www.facebook.com/odontolocaliza/" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/odontolocaliza" target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li class="round_border transition3s">
                                     <a href="https://www.instagram.com/odontolocaliza" target="_blank"><i class="fa fa-instagram"></i></a>
+                                </li>
+                                <li class="round_border transition3s">
+                                    <a href="https://plus.google.com/u/0/114254036987751513362" target="_blank"><i class="fa fa-google-plus"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -86,7 +89,12 @@
                         <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1">
                             <ul class="nav">
                                 <li>
-                                    <span style="font-size:14px;">Copyright © 2017 - Made with <i class="fa fa-heart"></i></span>
+                                    <span style="font-size:14px;">Copyright © {!! date('Y') !!} - Made with <i class="fa fa-heart"></i></span>
+                                </li>
+                                <li>
+                                    <a href="http://bit.ly/2lTgkC4" target="_blank">
+                                        <span style="font-size:14px;"><i class="fa fa-bug"></i> Reportar Erro</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

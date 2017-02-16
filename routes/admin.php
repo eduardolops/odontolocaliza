@@ -14,8 +14,17 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	# Home Admin
 	Route::get('',['as' => 'home_admin', function(){
 		return view('admin.home.index_home', ['page_title' => 'Homes', 'guard' => 'admin']);
-	}]);		
+	}]);	
 
+	#routes profile	
+	Route::get('profile', [
+	    'as' => 'profile',
+	    'uses' => 'Admin\ProfileController@index'
+	]);
+	Route::put('profile', [
+	    'as' => 'profile.update',
+	    'uses' => 'Admin\ProfileController@update'
+	]);
 	# routes cities
 	Route::get('cities', [
 	    'as' => 'cities',
@@ -104,18 +113,23 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	Route::get('plan', [
 		'uses' => 'Admin\PlansController@index'
 	])->name('plan');
+
 	Route::get('plan/create', [
 		'uses' => 'Admin\PlansController@create'
 	])->name('plan.create');
+
 	Route::post('plan/create', [
 		'uses' => 'Admin\PlansController@store'
 	])->name('plan.store');
+
 	Route::put('plan/{id}', [
 	    'uses' => 'Admin\PlansController@update'
 	])->name('plan.update');
+
 	Route::get('plan/{id}/edit', [
 	    'uses' => 'Admin\PlansController@show'
 	])->name('plan.show');
+	
 	Route::delete('plan/{id}/delete', [
 	    'uses' => 'Admin\PlansController@destroy'
 	])->name('plan.destroy');
@@ -124,14 +138,42 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	Route::get('doctors', [
 		'uses' => 'Admin\DoctorsController@index'
 	])->name('doctors');
+
+	Route::get('doctors/{user_id}/logar', [
+		'uses' => 'Admin\DoctorsController@logar'
+	])->name('doctors.logar')->where('user_id', '[0-9]+');
+
 	Route::put('doctors/{id}', [
 	    'uses' => 'Admin\DoctorsController@update'
 	])->name('doctors.update');
+
 	Route::get('doctors/{id}/edit', [
 	    'uses' => 'Admin\DoctorsController@show'
 	])->name('doctors.show');
-	Route::put('doctors/{id}/upload', [
-	    'uses' => 'UploadController@upload'
-	])->name('doctors.upload');
+
+	#routes admins
+	Route::get('manager/admin', [
+		'uses' => 'Admin\ManagerAdminController@index'
+	])->name('admin');
+	
+	Route::get('manager/admin/create', [
+	    'uses' => 'Admin\ManagerAdminController@create'
+	])->name('admin.create');
+	Route::post('manager/admin/create', [
+	    'uses' => 'Admin\ManagerAdminController@store'
+	])->name('admin.store');
+
+	Route::put('manager/admin/{id}', [
+	    'uses' => 'Admin\ManagerAdminController@update'
+	])->name('admin.update');
+
+	Route::get('manager/admin/{id}/edit', [
+	    'uses' => 'Admin\ManagerAdminController@show'
+	])->name('admin.show');
+
+	Route::delete('manager/admin/{id}/delete', [
+	    'uses' => 'Admin\ManagerAdminController@destroy'
+	])->name('admin.destroy');
+
 	
 }); # end route group auth.admin

@@ -81,29 +81,11 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 block_one">
-                <div id="google-map" style="height:461px" data-latitude="-22.1038738" data-longitude="-51.3936998"></div>
+                <div id="google-map" style="height:461px" data-latitude="-22.1078129" data-longitude="-51.4083633"></div>
             </div>
         </div>
         <!-- /input_wrapper -->
         {{ Form::close() }}
-        <div id="success">
-            <button class="closeAlert">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </button>
-            <div class="wrapper">
-                <p>
-                    Your message was sent successfully!</p>
-            </div>
-        </div>
-        <div id="error">
-            <button class="closeAlert">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </button>
-            <div class="wrapper">
-                <p>
-                    Something went wrong, try refreshing and submitting the form again.</p>
-            </div>
-        </div>
     </div>
 </div>
 <!-- /contact_form -->
