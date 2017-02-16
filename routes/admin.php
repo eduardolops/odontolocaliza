@@ -14,8 +14,17 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	# Home Admin
 	Route::get('',['as' => 'home_admin', function(){
 		return view('admin.home.index_home', ['page_title' => 'Homes', 'guard' => 'admin']);
-	}]);		
+	}]);	
 
+	#routes profile	
+	Route::get('profile', [
+	    'as' => 'profile',
+	    'uses' => 'Admin\ProfileController@index'
+	]);
+	Route::put('profile', [
+	    'as' => 'profile.update',
+	    'uses' => 'Admin\ProfileController@update'
+	]);
 	# routes cities
 	Route::get('cities', [
 	    'as' => 'cities',

@@ -35,6 +35,11 @@
                         <span class="hidden-xs"> {{ ucwords( $auth->name ) }} <span class="caret"></span> </span>
                     </a>
                     <ul class="dropdown-menu">
+                        @if( $guard == 'admin' )
+                            <li>
+                                <a href="{!! route('admin::profile') !!}"><i class="fa fa-user" aria-hidden="true"></i> Meu Perfil</a>
+                            </li>
+                        @endif
                         <li>
                             <a href="{{ url( $uri ) }}"
                                 onclick="event.preventDefault();

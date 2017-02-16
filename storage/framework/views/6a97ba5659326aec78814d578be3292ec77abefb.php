@@ -35,6 +35,11 @@
                         <span class="hidden-xs"> <?php echo e(ucwords( $auth->name )); ?> <span class="caret"></span> </span>
                     </a>
                     <ul class="dropdown-menu">
+                        <?php if( $guard == 'admin' ): ?>
+                            <li>
+                                <a href="<?php echo route('admin::profile'); ?>"><i class="fa fa-user" aria-hidden="true"></i> Meu Perfil</a>
+                            </li>
+                        <?php endif; ?>
                         <li>
                             <a href="<?php echo e(url( $uri )); ?>"
                                 onclick="event.preventDefault();
