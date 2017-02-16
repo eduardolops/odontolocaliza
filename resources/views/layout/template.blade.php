@@ -80,6 +80,9 @@
                                 <li class="round_border transition3s">
                                     <a href="https://www.instagram.com/odontolocaliza" target="_blank"><i class="fa fa-instagram"></i></a>
                                 </li>
+                                <li class="round_border transition3s">
+                                    <a href="https://plus.google.com/u/0/114254036987751513362" target="_blank"><i class="fa fa-google-plus"></i></a>
+                                </li>
                             </ul>
                         </div>
 
