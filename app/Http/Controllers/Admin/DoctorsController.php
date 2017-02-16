@@ -8,6 +8,8 @@ use Doctor\Models\User;
 use Doctor\Models\State;
 use Doctor\Models\City;
 
+use Auth;
+
 class DoctorsController extends Controller
 {
     protected $doctor; 
@@ -71,5 +73,20 @@ class DoctorsController extends Controller
             'message' => $message,
             'code' => 400,
         ], 400);
+    }
+
+    public function logar($user_id)
+    {
+        if( ! is_numeric($user_id) ):
+            return redirect()->route('admin::doctors')->with('error', 'Não foi possível logar no painel de esse usuário');
+        endif;
+
+        $doctor = $this->doctor->findOrFail($user_id);
+
+        if( Auth::guard('web')->loginUsingId($doctor->id) ){
+            return redirect()->route('doctor::home_doctor');
+        }else{
+            return redirect()->route('admin::doctors')->with('error', 'Não foi possível logar no painel de esse usuário');
+        }
     }
 }

@@ -104,18 +104,23 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	Route::get('plan', [
 		'uses' => 'Admin\PlansController@index'
 	])->name('plan');
+
 	Route::get('plan/create', [
 		'uses' => 'Admin\PlansController@create'
 	])->name('plan.create');
+
 	Route::post('plan/create', [
 		'uses' => 'Admin\PlansController@store'
 	])->name('plan.store');
+
 	Route::put('plan/{id}', [
 	    'uses' => 'Admin\PlansController@update'
 	])->name('plan.update');
+
 	Route::get('plan/{id}/edit', [
 	    'uses' => 'Admin\PlansController@show'
 	])->name('plan.show');
+	
 	Route::delete('plan/{id}/delete', [
 	    'uses' => 'Admin\PlansController@destroy'
 	])->name('plan.destroy');
@@ -124,12 +129,19 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	Route::get('doctors', [
 		'uses' => 'Admin\DoctorsController@index'
 	])->name('doctors');
+
+	Route::get('doctors/{user_id}/logar', [
+		'uses' => 'Admin\DoctorsController@logar'
+	])->name('doctors.logar')->where('user_id', '[0-9]+');
+
 	Route::put('doctors/{id}', [
 	    'uses' => 'Admin\DoctorsController@update'
 	])->name('doctors.update');
+
 	Route::get('doctors/{id}/edit', [
 	    'uses' => 'Admin\DoctorsController@show'
 	])->name('doctors.show');
+
 	Route::put('doctors/{id}/upload', [
 	    'uses' => 'UploadController@upload'
 	])->name('doctors.upload');
