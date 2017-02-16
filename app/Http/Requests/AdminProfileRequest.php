@@ -25,7 +25,7 @@ class AdminProfileRequest extends FormRequest
     {
         return [
             'name'         => 'required',
-            'password'     => 'required|min:6|confirmed',
+            'password'     => 'min:6|confirmed',
         ];
     }
 
@@ -38,7 +38,7 @@ class AdminProfileRequest extends FormRequest
     {
         return  [
             'name.required'         => 'Preencha o campo nome',
-            'password.required'     => 'Preencha o campo senha',
+            // 'password.required'     => 'Preencha o campo senha',
             'password.min'          => 'A senha deve ter pelo menos :min caracteres',
             'password.confirmed'    => 'A confirmação da senha não corresponde',
         ];

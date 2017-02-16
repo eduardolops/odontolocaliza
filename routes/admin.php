@@ -171,5 +171,9 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	    'uses' => 'Admin\ManagerAdminController@show'
 	])->name('admin.show');
 
+	Route::delete('manager/admin/{id}/delete', [
+	    'uses' => 'Admin\ManagerAdminController@destroy'
+	])->name('admin.destroy');
+
 	
 }); # end route group auth.admin

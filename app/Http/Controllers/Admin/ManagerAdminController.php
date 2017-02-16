@@ -5,6 +5,7 @@ namespace Doctor\Http\Controllers\Admin;
 use Doctor\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Doctor\Http\Requests\ManagerAdminRequest;
+use Doctor\Http\Requests\AdminProfileRequest;
 use Doctor\Models\Admin;
 
 class ManagerAdminController extends Controller
@@ -16,11 +17,16 @@ class ManagerAdminController extends Controller
     	$this->admin = $admin;
     }
 
-    public function index()
-    {
+    public function index(Request $request)
+    {	
+    	$search = $request->search;
         $guard = 'admin';
     	$page_title = 'Gerenciar Administradores';
-    	$admins = $this->admin->paginate(15);
+    	$admins = $this->admin->where( function($query) use($search){
+                                    if($search):
+                                        $query->where('name','like','%'.$search.'%');
+                                    endif;
+                              })->paginate(15);
     	return view('admin.manager.admin.index', compact('page_title', 'guard', 'admins'));
     }
 
@@ -52,19 +58,24 @@ class ManagerAdminController extends Controller
         if(!$admin){
             return redirect()->route('admin::admin');
         }
-        return view('admin.manager.admin.updade', ['page_title' => 'Editar: '.title_case($admin->name), 'admin' => $admin, 'guard' => 'admin']);   
+        return view('admin.manager.admin.update', ['page_title' => 'Editar: '.title_case($admin->name), 'admin' => $admin, 'guard' => 'admin']);   
     }
 
-    public function update($id, HealthInsuranceRequest $request)
+    public function update($id, AdminProfileRequest $request)
     {
-        $plan = $this->health_insurances->find($id);
-        if(!$plan) {
-            return redirect()->route('admin::health_insurance.show')->with('error', 'Plano de Saúde não encontrada');
+        $admin = $this->admin->findOrFail($id);
+        if(!$admin) {
+            return redirect()->route('admin::admin.show')->with('error', 'Usuário não encontrada');
         }
 
         try {
-            $plan->update($request->all());
-            return redirect()->route('admin::health_insurance')->with('status', 'Plano de Saúde alterada com sucesso!');
+            $admin->update($request->except(['password']));
+
+            if( $request->has('password') ):
+                $admin->update($request->only(['password']));
+            endif;
+
+            return redirect()->route('admin::admin')->with('status', 'Usuário alterada com sucesso!');
         } catch(\Exception $e) {
             $message = $e->getMessage();
         }
@@ -77,14 +88,14 @@ class ManagerAdminController extends Controller
 
     public function destroy($id)
     {
-        $plan = $this->health_insurances->find($id);
-        if(!$plan) {
-            return redirect()->route('admin::health_insurance')->with('error', 'Plano de Saúde não encontrada');
+        $admin = $this->admin->findOrFail($id);
+        if(!$admin) {
+            return redirect()->route('admin::health_insurance')->with('error', 'Usuário não encontrada');
         }
 
         try {
-            $plan->delete();
-            return redirect()->route('admin::health_insurance'); //->with('status', 'Especialização deletada com sucesso!');
+            $admin->delete();
+            return redirect()->route('admin::admin'); //->with('status', 'Especialização deletada com sucesso!');
         } catch(\Exception $e) {
             $message = $e->getMessage();
         }

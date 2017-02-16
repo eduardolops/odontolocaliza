@@ -26,7 +26,7 @@
                 <div class="box-tools" style="width: 290px;">
                     <a href="<?php echo route('admin::admin.create'); ?>" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Novo Adminstrador</a>
 
-                    <?php echo Form::open([ 'route' => ['admin::plan'], 'method' => 'get']); ?>
+                    <?php echo Form::open([ 'route' => ['admin::admin'], 'method' => 'get']); ?>
 
                         <div class="input-group input-group-sm pull-left" style="width: 150px;">
                             <input type="text" name="search" class="form-control pull-right" placeholder="Pesquisar">
@@ -51,13 +51,13 @@
                             <td><?php echo $admin->id; ?></td>
                             <td><?php echo title_case($admin->name); ?></td>
                             <td>
-                                <a href="<?php echo route('admin::plan.show', ['id' => $admin->id]); ?>" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
+                                <a href="<?php echo route('admin::admin.show', ['id' => $admin->id]); ?>" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
                                 <a href="<?php echo route('admin::plan.destroy', ['id' => $admin->id]); ?>" data-toggle="tooltip" data-placement="bottom" title="Excluir"
                                     onclick="event.preventDefault();
                                              document.getElementById('plan.destroy.<?php echo $admin->id; ?>').submit();">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                                <?php echo Form::open([ 'route' => ['admin::plan.destroy', $admin->id], 'id' => 'plan.destroy.'.$admin->id, 'method' => 'delete' ]); ?>
+                                <?php echo Form::open([ 'route' => ['admin::admin.destroy', $admin->id], 'id' => 'plan.destroy.'.$admin->id, 'method' => 'delete' ]); ?>
 
                                 <?php echo Form::close(); ?>
 

@@ -26,7 +26,7 @@
                 <div class="box-tools" style="width: 290px;">
                     <a href="{!! route('admin::admin.create') !!}" class="btn btn-sm btn-success pull-left" style="margin-right:5px;"><i class="fa fa-plus"></i> Novo Adminstrador</a>
 
-                    {!! Form::open([ 'route' => ['admin::plan'], 'method' => 'get']) !!}
+                    {!! Form::open([ 'route' => ['admin::admin'], 'method' => 'get']) !!}
                         <div class="input-group input-group-sm pull-left" style="width: 150px;">
                             <input type="text" name="search" class="form-control pull-right" placeholder="Pesquisar">
                             <div class="input-group-btn">
@@ -49,13 +49,13 @@
                             <td>{!! $admin->id !!}</td>
                             <td>{!! title_case($admin->name) !!}</td>
                             <td>
-                                <a href="{!! route('admin::plan.show', ['id' => $admin->id]) !!}" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
+                                <a href="{!! route('admin::admin.show', ['id' => $admin->id]) !!}" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
                                 <a href="{!! route('admin::plan.destroy', ['id' => $admin->id]) !!}" data-toggle="tooltip" data-placement="bottom" title="Excluir"
                                     onclick="event.preventDefault();
                                              document.getElementById('plan.destroy.{!! $admin->id !!}').submit();">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                                {!! Form::open([ 'route' => ['admin::plan.destroy', $admin->id], 'id' => 'plan.destroy.'.$admin->id, 'method' => 'delete' ]) !!}
+                                {!! Form::open([ 'route' => ['admin::admin.destroy', $admin->id], 'id' => 'plan.destroy.'.$admin->id, 'method' => 'delete' ]) !!}
                                 {!! Form::close() !!}
                                 </form>
                             </td>
