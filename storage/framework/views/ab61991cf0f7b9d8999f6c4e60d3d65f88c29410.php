@@ -87,10 +87,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1">
                             <ul class="nav">
                                 <li>
-                                    <span style="font-size:14px;">Copyright © 2017 - Made with <i class="fa fa-heart"></i></span>
+                                    <span style="font-size:14px;">Copyright © <?php echo date('Y'); ?> - Made with <i class="fa fa-heart"></i></span>
                                 </li>
                                 <li>
-                                    <a href="https://goo.gl/forms/WX9fTYmvVSp9sAYu1" target="_blank">
+                                    <a href="http://bit.ly/2lTgkC4" target="_blank">
                                         <span style="font-size:14px;"><i class="fa fa-bug"></i> Reportar Erro</span>
                                     </a>
                                 </li>
