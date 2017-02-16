@@ -5,6 +5,7 @@ namespace Doctor\Http\Controllers\Admin;
 use Doctor\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Doctor\Models\User;
+use Doctor\Models\Plan;
 use Doctor\Models\State;
 use Doctor\Models\City;
 
@@ -21,15 +22,27 @@ class DoctorsController extends Controller
 
     public function index(Request $request)
     {
-        $status = $request->input('status');
+        $req = [
+                'plan' => $request->input('plan'),
+                'doctor' => $request->input('doctor'),
+                'status' => $request->input('status')
+            ];
+
     	$guard  = 'admin';
     	$page_title = 'Doutores Cadastrados';
-    	$doctors = $this->doctor->where( function($query) use($status){
-                                if($status):
-                                    $query->where('status', $status);
+        $plans = Plan::all();
+    	$doctors = $this->doctor->where( function($query) use($req){
+                                if($req['plan']):
+                                    $query->where('subscription_plan',$req['plan']);
+                                endif;
+                                if($req['doctor']):
+                                    $query->where('name','like','%'.$req['doctor'].'%');
+                                endif;
+                                if($req['status']):
+                                    $query->where('status', $req['status']);
                                 endif;
                             })->paginate(15);
-    	return view('admin.doctors.index',compact('guard', 'page_title', 'doctors'));
+    	return view('admin.doctors.index',compact('guard', 'page_title', 'doctors', 'plans'));
     }
 
     public function show($id)

@@ -18,6 +18,17 @@
                 <div class="pull-left">
                     <form class="form-inline">
                         <div class="form-group">
+                            <input type="text" name="doctor" class="form-control input-sm" placeholder="Nome do Doutor">
+                        </div>
+                        <div class="form-group">
+                            <select name="plan" class="form-control input-sm">
+                                <option value="">Selecione Plano</option>
+                                <?php $__currentLoopData = $plans; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $plan): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                                    <option value="<?php echo str_slug($plan->name, '_'); ?>"><?php echo $plan->name; ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <select name="status" class="form-control input-sm">
                                 <option value="">Selecione Status</option>
                                 <option value="active">Ativos</option>
