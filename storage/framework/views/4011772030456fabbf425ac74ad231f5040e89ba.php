@@ -1,6 +1,4 @@
-@extends('layout.template')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <!-- ========================== Innaer Banner ========================= -->
 <section id="inner_banner">
@@ -49,34 +47,36 @@
 <!-- ============================ Contact Form =========================== -->
 <div class="contact_us_form">
     <div class="container">
-        {!! Form::open([ 'route' => 'contact_store', 'name' => 'contact', 'method' => 'post' ]) !!}
+        <?php echo Form::open([ 'route' => 'contact_store', 'name' => 'contact', 'method' => 'post' ]); ?>
+
         <h4>Ficamos muito contentes com o seu contato, diga um olá para a Odontolocalza!</h4>
         <div class="input_wrapper row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 block_two">
-                @if (session('message'))
+                <?php if(session('message')): ?>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="alert alert-success">
-                            {{ session('message') }}
+                            <?php echo e(session('message')); ?>
+
                         </div>
                     </div>
-                @endif
+                <?php endif; ?>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <input name="name" type="text" placeholder="Nome" required>
-                    @if ($errors->has('name'))
-                        <span class="help-block text-danger" style="margin-top:-10px">{!! $errors->first('name') !!}</span>
-                    @endif
+                    <?php if($errors->has('name')): ?>
+                        <span class="help-block text-danger" style="margin-top:-10px"><?php echo $errors->first('name'); ?></span>
+                    <?php endif; ?>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <input name="email" type="email" placeholder="Email" required>
-                    @if ($errors->has('email'))
-                        <span class="help-block text-danger" style="margin-top:-10px">{!! $errors->first('email') !!}</span>
-                    @endif
+                    <?php if($errors->has('email')): ?>
+                        <span class="help-block text-danger" style="margin-top:-10px"><?php echo $errors->first('email'); ?></span>
+                    <?php endif; ?>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <textarea name="message" placeholder="Mensagem" required></textarea>
-                    @if ($errors->has('message'))
-                        <span class="help-block text-danger" style="margin-top:-10px">{!! $errors->first('message') !!}</span>
-                    @endif
+                    <?php if($errors->has('message')): ?>
+                        <span class="help-block text-danger" style="margin-top:-10px"><?php echo $errors->first('message'); ?></span>
+                    <?php endif; ?>
                     <button class="transition3s" title="Send">Enviar</button>
                 </div>
             </div>
@@ -85,9 +85,11 @@
             </div>
         </div>
         <!-- /input_wrapper -->
-        {{ Form::close() }}
+        <?php echo e(Form::close()); ?>
+
     </div>
 </div>
 <!-- /contact_form -->
 <!-- ============================ /Contact Form =========================== -->
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

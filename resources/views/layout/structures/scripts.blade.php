@@ -5,9 +5,6 @@
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
-    <!-- Google map js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key={!! env('API_KEY_GOOGLE_MAPS') !!}&callback=initMap"></script>
-
     {{-- Gmap Helper --}}
     {{-- <script src="{{ asset('js/gmap.js') }}"></script> --}}
     <!-- revolution -->
@@ -39,6 +36,8 @@
     <script src="{{ asset('js/jquery.cookie.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/theme.js') }}"></script>
     <script src="{!! asset('assets/js/app-theme.js') !!}"></script>
+    <!-- Google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key={!! env('API_KEY_GOOGLE_MAPS') !!}&callback=initMap"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

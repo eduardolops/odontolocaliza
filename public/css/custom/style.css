@@ -1530,6 +1530,10 @@ footer .contact_form_footer textarea:focus {
 	border:1px solid #33BBE8;
 }
 
+.footer-default .espacamento{
+	margin-top:15px;
+}
+
 @media (max-width: 768px ) {
 	.footer-default .nav-social {
 		margin-right: 0;
