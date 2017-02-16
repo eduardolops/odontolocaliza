@@ -45,7 +45,6 @@
                 <table class="table table-hover">
                     <tr>
                         <th>ID</th>
-                        <th>Painel do Doutor</th>
                         <th>Nome do Doutor</th>
                         <th>Plano</th>
                         <th>Status</th>
@@ -56,14 +55,26 @@
                     @forelse($doctors as $doctor)
                         <tr>
                             <td>{!! str_pad($doctor->id, 4, "0", STR_PAD_LEFT);  !!}</td>
-                            <td><button class="btn btn-default btn-sm" onclick="window.open('{!! route('admin::doctors.logar', ['user_id' => $doctor->id]) !!}', '_blank');" ><i class="fa fa-sign-in" aria-hidden="true"></i> Logar no Painel</button></td>
                             <td>{!! title_case($doctor->name) !!}</td>
                             <td>{!! title_case( str_replace('_', ' ', $doctor->subscription_plan) ) !!}</td>
                             <td>{!! convertTypeStatus($doctor->status) !!}</td>
                             <td>{!! $doctor->phone !!}</td>
                             <td>{!! date('d/m/Y H:i', strtotime($doctor->created_at)) !!}</td>
                             <td>
-                                <a href="{!! route('admin::doctors.show', ['id' => $doctor->id]) !!}" style="margin-right:5px;" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fa fa-edit"></i></a>
+                                <div class="btn-group">
+                                    <button class="btn btn-default btn-sm" onclick="window.open('{!! route('admin::doctors.logar', ['user_id' => $doctor->id]) !!}', '_blank');" >
+                                        <i class="fa fa-sign-in" aria-hidden="true"></i> Logar no Painel
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="{!! route('admin::doctors.show', ['id' => $doctor->id]) !!}"><i class="fa fa-edit"></i>Editar</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </td>
                         </tr>
                     @empty
