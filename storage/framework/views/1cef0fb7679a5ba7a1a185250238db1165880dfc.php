@@ -24,14 +24,14 @@
         <div class="box box-primary">
             <!-- /.box-header -->
             <!-- form start -->
-            <?php echo Form::open([ 'route' => 'admin::profile.update',  'name' => 'administrador', 'method' => 'put' ]); ?>
+            <?php echo Form::open([ 'route' => 'admin::admin.store',  'name' => 'administrador', 'method' => 'post' ]); ?>
 
                 <div class="box-body">
                     <div class="row">
                         <div class="col-md-6">
                             <?php echo Form::label('name', 'Nome'); ?>
 
-                            <?php echo Form::text('name', $auth->name, ['class' => 'form-control', 'placeholder' => 'Nome']); ?>
+                            <?php echo Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Nome']); ?>
 
                             <?php if($errors->has('name')): ?>
                                 <p class="text-danger"><?php echo $errors->first('name'); ?></p>
@@ -42,7 +42,7 @@
                         <div class="col-md-6">
                             <?php echo Form::label('email', 'Email'); ?>
 
-                            <?php echo Form::email('email', $auth->email, ['class' => 'form-control', 'placeholder' => 'Email']); ?>
+                            <?php echo Form::email('email', '', ['class' => 'form-control', 'placeholder' => 'Email']); ?>
 
                             <?php if($errors->has('email')): ?>
                                 <p class="text-danger"><?php echo $errors->first('email'); ?></p>

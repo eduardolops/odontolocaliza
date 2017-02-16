@@ -4,7 +4,7 @@ namespace Doctor\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdminProfileRequest extends FormRequest
+class ManagerAdminRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,6 +25,7 @@ class AdminProfileRequest extends FormRequest
     {
         return [
             'name'         => 'required',
+            'email'        => 'required|email|unique:admins,email',
             'password'     => 'required|min:6|confirmed',
         ];
     }
@@ -38,6 +39,9 @@ class AdminProfileRequest extends FormRequest
     {
         return  [
             'name.required'         => 'Preencha o campo nome',
+            'email.required'        => 'Preencha o campo email',
+            'email.unique'          => 'Email já está sendo utilizado',
+            'email.email'           => 'Email inválido',
             'password.required'     => 'Preencha o campo senha',
             'password.min'          => 'A senha deve ter pelo menos :min caracteres',
             'password.confirmed'    => 'A confirmação da senha não corresponde',

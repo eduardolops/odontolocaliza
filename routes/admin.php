@@ -151,8 +151,25 @@ Route::group(['middleware' => ['auth:admin']], function(){
 	    'uses' => 'Admin\DoctorsController@show'
 	])->name('doctors.show');
 
-	Route::put('doctors/{id}/upload', [
-	    'uses' => 'UploadController@upload'
-	])->name('doctors.upload');
+	#routes admins
+	Route::get('manager/admin', [
+		'uses' => 'Admin\ManagerAdminController@index'
+	])->name('admin');
+	
+	Route::get('manager/admin/create', [
+	    'uses' => 'Admin\ManagerAdminController@create'
+	])->name('admin.create');
+	Route::post('manager/admin/create', [
+	    'uses' => 'Admin\ManagerAdminController@store'
+	])->name('admin.store');
+
+	Route::put('manager/admin/{id}', [
+	    'uses' => 'Admin\ManagerAdminController@update'
+	])->name('admin.update');
+
+	Route::get('manager/admin/{id}/edit', [
+	    'uses' => 'Admin\ManagerAdminController@show'
+	])->name('admin.show');
+
 	
 }); # end route group auth.admin
