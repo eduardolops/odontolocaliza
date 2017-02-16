@@ -1515,6 +1515,7 @@ footer .contact_form_footer textarea:focus {
 	border:1px solid #fff;
 	display: inline-block;
 	margin-right:10px;
+	transition:all 0.3s ease;
 }
 .footer-default .nav-social > li > a {
     color: #ffffff;
@@ -1528,6 +1529,9 @@ footer .contact_form_footer textarea:focus {
 .footer-default .nav-social li:hover {
 	background:#33BBE8;
 	border:1px solid #33BBE8;
+	-webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .footer-default .espacamento{
