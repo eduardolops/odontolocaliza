@@ -5,8 +5,11 @@ namespace Doctor\Http\Controllers\Admin;
 use Doctor\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Doctor\Models\User;
+use Doctor\Models\Plan;
 use Doctor\Models\State;
 use Doctor\Models\City;
+
+use Auth;
 
 class DoctorsController extends Controller
 {
@@ -19,15 +22,27 @@ class DoctorsController extends Controller
 
     public function index(Request $request)
     {
-        $status = $request->input('status');
+        $req = [
+                'plan' => $request->input('plan'),
+                'doctor' => $request->input('doctor'),
+                'status' => $request->input('status')
+            ];
+
     	$guard  = 'admin';
     	$page_title = 'Doutores Cadastrados';
-    	$doctors = $this->doctor->where( function($query) use($status){
-                                if($status):
-                                    $query->where('status', $status);
+        $plans = Plan::all();
+    	$doctors = $this->doctor->where( function($query) use($req){
+                                if($req['plan']):
+                                    $query->where('subscription_plan',$req['plan']);
+                                endif;
+                                if($req['doctor']):
+                                    $query->where('name','like','%'.$req['doctor'].'%');
+                                endif;
+                                if($req['status']):
+                                    $query->where('status', $req['status']);
                                 endif;
                             })->paginate(15);
-    	return view('admin.doctors.index',compact('guard', 'page_title', 'doctors'));
+    	return view('admin.doctors.index',compact('guard', 'page_title', 'doctors', 'plans'));
     }
 
     public function show($id)
@@ -37,7 +52,7 @@ class DoctorsController extends Controller
     	endif;
 
     	$guard   = 'admin';
-    	$states  = State::all();
+    	$states  = State::orderBy('name', 'asc')->get();
         $cities  = City::all();
     	$doctor  = $this->doctor->findOrFail($id);
     	$page_title = 'Dr(a): '. title_case($doctor->name);
@@ -71,5 +86,20 @@ class DoctorsController extends Controller
             'message' => $message,
             'code' => 400,
         ], 400);
+    }
+
+    public function logar($user_id)
+    {
+        if( ! is_numeric($user_id) ):
+            return redirect()->route('admin::doctors')->with('error', 'Não foi possível logar no painel de esse usuário');
+        endif;
+
+        $doctor = $this->doctor->findOrFail($user_id);
+
+        if( Auth::guard('web')->loginUsingId($doctor->id) ){
+            return redirect()->route('doctor::home_doctor');
+        }else{
+            return redirect()->route('admin::doctors')->with('error', 'Não foi possível logar no painel de esse usuário');
+        }
     }
 }

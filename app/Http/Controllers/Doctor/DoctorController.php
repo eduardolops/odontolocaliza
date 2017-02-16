@@ -24,7 +24,7 @@ class DoctorController extends Controller
     {
         $doctor  = Auth::user();
         $page_title = 'Meus Dados';
-        $states  = State::all();
+        $states  = State::orderBy('name', 'asc')->get();
         $cities  = City::all();
         $guard   = 'web';
         return view('doctor.profile.index', compact('page_title', 'doctor', 'states', 'cities', 'guard'));
