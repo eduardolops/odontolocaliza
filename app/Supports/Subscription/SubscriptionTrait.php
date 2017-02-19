@@ -99,9 +99,13 @@ trait SubscriptionTrait
             \Iugu::setApiKey($this->getApiKey());
 
             $customer = \Iugu_Customer::create([
-                'email' => $this->email,
-                'name'  => $this->name,
-                'notes' => $this->id.'-'.$this->email,
+                'email'      => $this->email,
+                'name'       => $this->name,
+                'cpf_cnpj'   => str_replace('.', '', str_replace('-', '',$this->doc_cpf)),
+                'number'     => $this->number,
+                'zip_code'   => $this->zip_code,
+                'complement' => $this->complement,
+                'notes'      => $this->id.'-'.$this->email,
             ]);
 
             if ($customer) {
