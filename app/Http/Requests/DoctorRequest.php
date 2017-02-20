@@ -26,7 +26,7 @@ class DoctorRequest extends FormRequest
         return [
             'name'         => 'required',
             'number_cro'   => 'required',
-            'doc_cpf'      => 'required',
+            'doc_cpf'      => 'required|cpf',
             'email'        => 'required|email|unique:users,email',
             'password'     => 'required|min:6|confirmed',
             'specialization' => 'required',
@@ -53,6 +53,7 @@ class DoctorRequest extends FormRequest
             return  [
                 'name.required'         => 'Preencha o campo nome',
                 'doc_cpf.required'      => 'Preencha o campo CPF',
+                'doc_cpf.cpf'           => 'CPF inválido',
                 'number_cro.required'   => 'Preencha o campo Número do CRO',
                 'email.required'        => 'Preencha o campo email',
                 'email.unique'          => 'Email já está sendo utilizado',
