@@ -171,7 +171,7 @@ return [
         Canducci\ZipCode\Providers\ZipCodeAddressServiceProvider::class,
         // Potelo\GuPayment\GuPaymentServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
-
+        PHPLegends\PtBrValidator\ValidatorProvider::class,
         //
 
         /*
