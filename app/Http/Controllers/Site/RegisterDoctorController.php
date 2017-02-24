@@ -55,8 +55,8 @@ class RegisterDoctorController extends Controller
         SEO::setCanonical( url()->current() );
         SEO::opengraph()->addProperty('type', 'articles'); 
 
-        $specializations = $this->specialization->all();
-        $healths = $this->healthInsurance->all();
+        $specializations = $this->specialization->orderBy('name', 'asc')->get();
+        $healths = $this->healthInsurance->orderBy('name', 'asc')->get();
         $states  = State::orderBy('name', 'asc')->get();
 
         return view('layout.pages.register', compact( 'states','specializations','healths' ));
