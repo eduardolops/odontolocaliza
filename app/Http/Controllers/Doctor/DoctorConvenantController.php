@@ -32,7 +32,7 @@ class DoctorConvenantController extends Controller
                                                        ->join('users', 'users.id', '=', 'convenants_accepts_doctors.user_id')
                                                        ->join('healthinsurances', 'healthinsurances.id', '=', 'convenants_accepts_doctors.convenant_id')
                                                        ->where('users.id','=',$doctor->id)->paginate(15);
-        $convenants = $this->healthInsurance->all();
+        $convenants = $this->healthInsurance->orderBy('name', 'asc')->get();
         return view('doctor.profile.convenant', compact('page_title', 'doctor', 'convenants', 'convenants_accepts', 'guard'));
     }
 

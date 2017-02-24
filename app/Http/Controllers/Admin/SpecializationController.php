@@ -26,7 +26,7 @@ class SpecializationController extends Controller
                                     if($role):
                                         $query->where('name','like','%'.$role.'%');
                                     endif;
-                                })->paginate(15);
+                                })->orderBy('name', 'asc')->paginate(15);
     	return view('admin.register.specializations.index', ['page_title' => 'Especializações', 'specializations' => $specializations, 'guard' => 'admin']);
     }
 

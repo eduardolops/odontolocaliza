@@ -29,7 +29,7 @@ class DoctorSpealizationsController extends Controller
                                                        ->join('users', 'users.id', '=', 'specialization_doctors.user_id')
                                                        ->join('specializations', 'specializations.id', '=', 'specialization_doctors.specialization_id') 
                                                        ->where('users.id','=',$doctor->id)->paginate(15);
-        $specializations = $this->specialization->all();
+        $specializations = $this->specialization->orderBy('name', 'asc')->get();
         return view('doctor.profile.spealizations', compact('page_title', 'doctor', 'specialization_doctor', 'specializations', 'guard'));
     }
 
