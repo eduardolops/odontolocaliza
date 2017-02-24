@@ -1,17 +1,9 @@
 $(function(){
-    // $('#specialization').multiselect();
-    // $('#healthinsurance').multiselect({
-    //     enableFiltering: true,
-    //     filterBehavior: 'value'
-    // });
-    $('select[multiple]').multiselect({
-        search: true,
-        delay: 100,
-        texts: {
+    $('select[multiple]').multipleSelect({
+            width: '100%',
             placeholder: '-- Selecione --',
-            search: 'Pesquisar',
-            selectedOptions: ' selecionado'
-        }
+            selectAllText: 'Selecionar Todos',
+            filter: true
     });
 
     $('.carousel').carousel(); 

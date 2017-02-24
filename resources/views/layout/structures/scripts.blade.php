@@ -5,8 +5,6 @@
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
-    {{-- Gmap Helper --}}
-    {{-- <script src="{{ asset('js/gmap.js') }}"></script> --}}
     <!-- revolution -->
     <script src="{{ asset('vendor/revolution/jquery.themepunch.tools.min.js') }}"></script>
     <script src="{{ asset('vendor/revolution/jquery.themepunch.revolution.min.js') }}"></script>
@@ -31,8 +29,7 @@
     <script src="{{ asset ("/vendor/input-mask/jquery.inputmask.extensions.js") }}"></script>
     <!-- Validation -->
     <script type="text/javascript" src="{{ asset('js/validate.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.multiselect.js') }}"></script>
-    {{-- <script src="{{ asset('js/ultraselect.js') }}" type="text/javascript"></script> --}}
+    <script type="text/javascript" src="{{ asset('js/multiple-select.js') }}"></script>
     <script src="{{ asset('js/jquery.cookie.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/theme.js') }}"></script>
     <script src="{!! asset('assets/js/app-theme.js') !!}"></script>

@@ -85,22 +85,10 @@
     <script src="{{ asset ("/bower_components/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" ) }}"></script>
     <script>
       $(function () {
-        // // Replace the <textarea id="editor1"> with a CKEditor
-        // // instance, using default configuration.
-        // CKEDITOR.replace('editor1');
-        //bootstrap WYSIHTML5 - text editor
         $(".textarea").wysihtml5();
       });
     </script>
-    {{-- <script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script> --}}
     <script src="{{ asset("/assets/js/jquery.ui.widget.js") }}"></script>
-    {{-- <script src="{{ asset("/assets/js/jquery.iframe-transport.js") }}"></script>
-    <script src="{{ asset("/assets/js/jquery.fileupload.js") }}"></script>
-    <script src="{{ asset("/assets/js/jquery.fileupload-process.js") }}"></script>
-    <script src="{{ asset("/assets/js/jquery.fileupload-image.js") }}"></script>
-    <script src="{{ asset("/assets/js/jquery.fileupload-audio.js") }}"></script>
-    <script src="{{ asset("/assets/js/jquery.fileupload-video.js") }}"></script>
-    <script src="{{ asset("/assets/js/jquery.fileupload-validate.js") }}"></script> --}}
 
     <script>
         document.getElementById("uploadBtn").onchange = function () {

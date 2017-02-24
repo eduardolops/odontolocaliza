@@ -132,11 +132,19 @@ select:focus{
 .register form{
     background:#F5F5F5;
 }
-
 .register label{
+    font-size:12px; 
+}
+.register label input[type='checkbox']{
+    margin-right:5px;
+}
+
+.register .label{
     color:#2C2C2C;
     font-size:15px;
-    margin-bottom: -5px;
+    margin-top:15px;
+    margin-left: -8px;
+    float: left;
 }
 
 .register input, select{

@@ -1,6 +1,4 @@
-@extends('layout.template')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- ========================== Innaer Banner ========================= -->
 <section id="inner_banner">
 	<div class="overlay">
@@ -16,10 +14,11 @@
     <div class="register" id="register" style="margin-top:10px; margin-bottom:20px;">
         <div class="col-xs-12">
             <div class="row well">
-                @include('layout.structures.form-register-doctor')
+                <?php echo $__env->make('layout.structures.form-register-doctor', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             </div>
         </div>
     </div>
 </section>
 
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
