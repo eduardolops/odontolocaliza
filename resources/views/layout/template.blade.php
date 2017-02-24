@@ -27,11 +27,10 @@
     <!-- Custom Css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive/responsive.css') }}">
-    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/theme/color-01.css') }}">
-    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/bootstrap/bootstrap-multiselect.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/subscription-pricing.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/animate.min.css') }}">
-    <link href="{{ asset('css/custom/jquery.multiselect.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/multiple-select.css') }}">
 
     <!--[if lt IE 9]>
    		<script src="{{ asset('js/html5shiv.js') }}"></script>

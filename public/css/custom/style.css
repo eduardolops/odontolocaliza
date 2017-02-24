@@ -1663,7 +1663,7 @@ input[type="radio"] {
 	}
 }
 
-.appointment.space_fix {
+/*.appointment.space_fix {
 	padding: 65px 0;
 }
 
@@ -1687,12 +1687,12 @@ input[type="radio"] {
 	width:100%;
 	text-align: center;
 	padding-left: 55px;
-}
-.appointment span {
+}*/
+/*.appointment span {
 	color:#2c2c2c;
 	display: block;
 	margin-left: 0;
-}
+}*/
 /*================== We are Style two ===============*/
 .medicine_plus_style_two .home-services h4 span {
 	color:#e2e2e2;

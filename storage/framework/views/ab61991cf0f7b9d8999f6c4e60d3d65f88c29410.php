@@ -28,11 +28,10 @@
     <!-- Custom Css -->
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/style.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/responsive/responsive.css')); ?>">
-    <link rel="stylesheet" type="text/css" media="all" href="<?php echo e(asset('css/theme/color-01.css')); ?>">
-    <link rel="stylesheet" type="text/css" media="all" href="<?php echo e(asset('css/bootstrap/bootstrap-multiselect.css')); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/theme.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/subscription-pricing.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/animate.min.css')); ?>">
-    <link href="<?php echo e(asset('css/custom/jquery.multiselect.css')); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/custom/multiple-select.css')); ?>">
 
     <!--[if lt IE 9]>
    		<script src="<?php echo e(asset('js/html5shiv.js')); ?>"></script>
