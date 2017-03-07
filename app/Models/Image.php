@@ -17,4 +17,5 @@ class Image extends Model
     {
         return $this->belongsTo(User::class, 'id', 'user_id');
     }
+
 }
