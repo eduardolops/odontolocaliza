@@ -126,6 +126,9 @@
                             <li>
                                 Convênios
                             </li>
+                            <li class="blue-light">
+                                <strong>EXPERIMENTE POR 10 DIAS GRÁTIS</strong>
+                            </li>
                             <li class="bg-white">
                                 <h3 class="blue-light">R$ {{ number_format($plans[0]->price, 2, ',', '') }}</h3>
                                 <span>por mês</span>
@@ -151,6 +154,9 @@
                             </li>
                             <li>
                                 Link para site
+                            </li>
+                            <li class="blue-light">
+                                <strong>EXPERIMENTE POR 10 DIAS GRÁTIS</strong>
                             </li>
                             <li class="bg-white">
                                 <h3 class="blue-light">R$ {{ number_format($plans[1]->price, 2, ',', '') }}</h3>
