@@ -102,6 +102,15 @@ select:focus{
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
+.btn-pricing {
+  color: #fff;
+  background-color: #23a8ed; 
+}
+.btn-pricing:hover {
+    opacity: .9;
+    color:#fff;
+    background-color: #23a8ed; 
+}
 
 .destaque{
     font-size:18px !important;

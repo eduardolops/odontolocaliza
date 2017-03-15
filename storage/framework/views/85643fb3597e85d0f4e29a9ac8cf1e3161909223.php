@@ -69,7 +69,7 @@
             </h3>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4">
+            <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-4">
                 <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
             </div>
         </div>
@@ -124,12 +124,12 @@
                             <li>
                                 Convênios
                             </li>
-                            <li class="blue-light">
-                                <strong>EXPERIMENTE POR 10 DIAS GRÁTIS</strong>
-                            </li>
                             <li class="bg-white">
                                 <h3 class="blue-light">R$ <?php echo e(number_format($plans[0]->price, 2, ',', '')); ?></h3>
                                 <span>por mês</span>
+                            </li>
+                            <li class="bg-white">
+                                <a href="<?php echo route('register'); ?>" class="btn btn-lg btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
                             </li>
                         </ul>
                 </div>
@@ -153,12 +153,12 @@
                             <li>
                                 Link para site
                             </li>
-                            <li class="blue-light">
-                                <strong>EXPERIMENTE POR 10 DIAS GRÁTIS</strong>
-                            </li>
                             <li class="bg-white">
                                 <h3 class="blue-light">R$ <?php echo e(number_format($plans[1]->price, 2, ',', '')); ?></h3>
                                 <span>por mês</span>
+                            </li>
+                            <li class="bg-white">
+                                <a href="<?php echo route('register'); ?>" class="btn btn-lg btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
                             </li>
                         </ul>
                 </div>
@@ -183,7 +183,7 @@
             </h3>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4">
+            <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-4">
                 <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
             </div>
         </div>

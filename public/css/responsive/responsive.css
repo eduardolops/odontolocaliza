@@ -117,7 +117,13 @@
 	.blog_details .post_meta .post_img {
 		margin-bottom: 35px;
 	}
-	
+
+	.jumbotron-block a{
+		font-size: 16px;
+	}
+	.btn-pricing{
+		font-size:14px;
+	}
 }
 
 /*(max-width: 1199px)*/
@@ -846,4 +852,21 @@
 	.hades.tparrows {
 		top:55% !important;
 	}
+}
+
+@media (max-width: 320px) {
+	
+	.jumbotron-block a{
+		font-size: 16px;
+	}
+	.jumbotron-block .title h3{
+		font-size: 18px;
+	}
+	.btn-pricing{
+		font-size:14px;
+	}
+	.itwork-block .bg-blue-light .pad{
+		padding: 60px 14px;
+	}
+
 }
