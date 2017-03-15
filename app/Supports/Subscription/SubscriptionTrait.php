@@ -108,6 +108,10 @@ trait SubscriptionTrait
                 'notes'      => $this->id.'-'.$this->email,
             ]);
 
+            if (isset($customer->errors)) {
+                return false;
+            }
+
             if ($customer) {
                 $this->customer_id = $customer->id;
                 $this->save();
@@ -170,6 +174,11 @@ trait SubscriptionTrait
                     $this->expires_at = $subscription->expires_at;
                     $this->status = 'active';
                 }
+
+                if( $subscription->suspended ){
+                    $this->status = 'suspend';
+                }
+
                 $this->subscription_plan = $subscription->plan_identifier;
                 $this->subscription_active = $subscription->active;
                 $this->subscription_suspended = $subscription->suspended;

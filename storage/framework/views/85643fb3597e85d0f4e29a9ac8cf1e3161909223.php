@@ -64,11 +64,13 @@
 <section class="jumbotron jumbotron-block">
     <div class="container">
         <div class="title">
-            <h3>Assina já e faça parte do maior site especializado em busca de profissionais de odontologia do Brasil.</h3>
+            <h3>
+                APROVEITE O TESTE <strong class="blue-light">GRÁTIS</strong> POR <strong class="blue-light">10 DIAS</strong> E FAÇA PARTE DO MELHOR PORTAL ODONTOLÓGICO DO BRASIL.
+            </h3>
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4">
-                <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">Assine já</a>
+                <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
             </div>
         </div>
     </div>
@@ -170,11 +172,13 @@
 <section class="jumbotron jumbotron-block">
     <div class="container">
         <div class="title">
-            <h3>Assina já e faça parte do maior site especializado em busca de profissionais de odontologia do Brasil.</h3>
+            <h3>
+                APROVEITE O TESTE <strong class="blue-light">GRÁTIS</strong> POR <strong class="blue-light">10 DIAS</strong> E FAÇA PARTE DO MELHOR PORTAL ODONTOLÓGICO DO BRASIL.
+            </h3>
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4">
-                <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">Assine já</a>
+                <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
             </div>
         </div>
     </div>

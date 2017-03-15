@@ -60,8 +60,11 @@ function convertTypeStatus($status)
         case 'active':
             $status = '<span class="label label-success">Ativo</span>';
             break;
+        case 'suspend':
+            $status = '<span class="label label-danger">Inativo</span>';
+            break;
         default:
-            $status = '<span class="label label-warning">Pendentes</span>';
+            $status = '<span class="label label-warning">Pendente</span>';
             break;
     }
 

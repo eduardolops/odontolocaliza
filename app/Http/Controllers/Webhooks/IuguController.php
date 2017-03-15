@@ -38,8 +38,10 @@ class IuguController extends Controller
     protected function handleSubscriptionSuspended(array $payload)
     {
         $user = User::where('subscription_id', $payload['data']['id'])->first();
-        $user->markAsCancelled();
-
+        $user->suspend();
+        $user->status = 'suspend';
+        $user->save();
+        
         return new Response('Webhook Handled', 200);
     }
 

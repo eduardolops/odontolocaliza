@@ -39,10 +39,10 @@
                         </div>
                         <div class="box-body">
                             <p>
-                                Complete o seu cadastro para ter uma melhor divulgação, Acesse: Meus Dados/ Dados Pessoais
+                                Complete o seu cadastro para ter uma melhor divulgação. Acesse: Meus Dados / Dados Pessoais
                             </p>
                             <p>
-                                Complete o seu cadastro adicionando uma imagem de perfil (2M tamanho máximo permitido) adicione o seu horário de atendimento e telefones, coloque também suas redes socias, assim para um maior contato e interação com seus pacientes.
+                                Complete o seu cadastro adicionando uma imagem de perfil (2M tamanho máximo permitido), adicione o seu horário de atendimento e telefones, coloque também suas redes socias, assim para um maior contato e interação com seus pacientes.
                             </p>
                         </div>
                     </div>

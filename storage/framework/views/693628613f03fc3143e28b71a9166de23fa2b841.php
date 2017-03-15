@@ -32,6 +32,7 @@
                             <select name="status" class="form-control input-sm">
                                 <option value="">Selecione Status</option>
                                 <option value="active">Ativos</option>
+                                <option value="suspend">Inativos</option>
                                 <option value="pending">Pendentes</option>
                             </select>
                         </div>

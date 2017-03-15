@@ -9,6 +9,12 @@
         <div class="box">
             <div class="row" style="margin-top:30px">
                 <div class="block">
+                    <div class="col-md-12" style="text-align:center; margin-bottom:25px; ">
+                        <h4>Aproveite o teste <strong class="blue-light">GRÁTIS</strong> por <strong class="blue-light">10 dias</strong>.</h4>
+                        <h4>
+                            A primeira mensalidade só será cobrada após o término do período de teste.
+                        </h4>
+                    </div>
                     <div class="col-md-4 col-sm-6 col-md-offset-2">
                             <ul class="pricing p-blue">
                                 <li class="bg-blue-light">
@@ -38,7 +44,7 @@
                                         <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                                         <input type="hidden" name="user" value="<?php echo e(Auth::guard($guard)->user()->id); ?>">
                                         <input type="hidden" name="plan" value="<?php echo e($plans[0]->id); ?>">
-                                        <button type="submit">ASSINAR PLANO</button>
+                                        <button type="submit">EXPERIMENTE POR 10 DIAS GRÁTIS</button>
                                     </form>
                                 </li>
                             </ul>
@@ -72,7 +78,7 @@
                                         <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                                         <input type="hidden" name="user" value="<?php echo e(Auth::guard($guard)->user()->id); ?>">
                                         <input type="hidden" name="plan" value="<?php echo e($plans[1]->id); ?>">
-                                        <button type="submit">ASSINAR PLANO</button>
+                                        <button type="submit">EXPERIMENTE POR 10 DIAS GRÁTIS</button>
                                     </form>
                                 </li>
                             </ul>
