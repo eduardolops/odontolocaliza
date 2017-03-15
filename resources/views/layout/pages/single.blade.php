@@ -32,18 +32,18 @@
 						<p>CRO: {!! $doctor->number_cro !!}</p>
 
 						<ul>
-							{{-- @if($doctor->social_facebook) --}}
+							@if( $doctor->social_facebook )
 								<li class="round_border transition3s"><a href="{!! $doctor->social_facebook or '#' !!}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							{{-- @endif --}}
-							{{-- @if($doctor->social_twitter) --}}
+							@endif
+							@if( $doctor->social_twitter )
 								<li class="round_border transition3s"><a href="{!! $doctor->social_twitter or '#' !!}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							{{-- @endif --}}
-							{{-- @if($doctor->social_instagran) --}}
+							@endif
+							@if( $doctor->social_instagran )
 								<li class="round_border transition3s"><a href="{!! $doctor->social_instagran or '#' !!}" target="_blank"><i class="fa fa-instagram"></i></a></li>
-							{{-- @endif --}}
-							{{-- @if($doctor->social_gplus) --}}
+							@endif
+							@if( $doctor->social_gplus )
 								<li class="round_border transition3s"><a href="{!! $doctor->social_gplus or '#' !!}" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-							{{-- @endif --}}
+							@endif
 						</ul>
 					</div>
 					@if( $gallery->count() >= 1 )

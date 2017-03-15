@@ -17,14 +17,14 @@ class PaymentController extends Controller
     	$this->plan   = $plan;
     }
 
-    public function billing()
+    public function billing($param = null)
     {
       $guard = 'web';
       $page_title = 'Assinatura';
       $user  = auth()->guard($guard)->user();
       $plans = $this->plan->all(); 
       $subscription = $this->doctor->findOrFail($user->id)->loadSubscription();
-
+      
       if ($subscription) {
           return view('doctor.billings.subscription.edit', compact('subscription','page_title','guard','user','plans'));
       } else {

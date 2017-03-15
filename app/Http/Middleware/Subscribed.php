@@ -22,6 +22,7 @@ class Subscribed
      */
     public function handle($request, Closure $next)
     {
+        
         if( ! $this->getUser()->subscribed() ){
             return redirect()->route('billings');
         }

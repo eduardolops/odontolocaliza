@@ -41,7 +41,7 @@ class DoctorsController extends Controller
                                 if($req['status']):
                                     $query->where('status', $req['status']);
                                 endif;
-                            })->paginate(15);
+                            })->orderBy('id', 'desc')->paginate(15);
     	return view('admin.doctors.index',compact('guard', 'page_title', 'doctors', 'plans'));
     }
 
