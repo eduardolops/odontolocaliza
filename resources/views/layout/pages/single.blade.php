@@ -89,8 +89,9 @@
 						{!! $complement !!}
 						<p><i class="fa fa-calendar"></i> Horário de Atendimento: {!! $doctor->office_hours !!}</p>
 						<p class="destaque">
-							<i class="fa fa-phone"></i> {!! $doctor->phone !!} &nbsp&nbsp
-							<i class="fa fa-mobile"></i> {!! $doctor->cell_phone !!}
+							{{-- <i class="fa fa-phone"></i> {!! $doctor->phone !!} &nbsp&nbsp
+							<i class="fa fa-mobile"></i> {!! $doctor->cell_phone !!} --}}
+							<a href="#" class="btn btn-primary btn-dentist">Ver Telefone</a>
 						</p>
 					</div>
 				</div>
