@@ -37,7 +37,7 @@
 				<div class="single_item transition3s">
 					<div class="bg transition3s"><span class="icon icon-endereco"></span></div>
 					<h4>Localização</h4>
-					<p>Encontre a localização do consultório, clinica, hospital ou laboratório de atuação do seu dentista.</p>						
+					<p>Encontre a localização do consultório, clínica, hospital ou laboratório de atuação do seu dentista.</p>						
 				</div> <!-- End .single_item -->
 				<div class="single_item transition3s middle_item">
 					<div class="bg transition3s"><span class="icon icon-economia"></span></div>

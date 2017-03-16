@@ -86,7 +86,7 @@
             <div class="col-md-12">
                 <div class="text-center">
                     <div class="title-block-two">
-                        <h4>Garanta <strong>vizibilidade</strong> para seu consultório.</h4>
+                        <h4>Garanta <strong>visibilidade</strong> para seu consultório.</h4>
                         <h4>
                             A <strong class="blue-light">Odontolocaliza</strong> está nas <strong>primeiras páginas</strong> dos sites de busca.
                         </h4>
