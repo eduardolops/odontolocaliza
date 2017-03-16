@@ -12,9 +12,10 @@ Route::post('/login/logout', 'Admin\AdminController@logout');
 
 Route::group(['middleware' => ['auth:admin']], function(){
 	# Home Admin
-	Route::get('',['as' => 'home_admin', function(){
-		return view('admin.home.index_home', ['page_title' => 'Homes', 'guard' => 'admin']);
-	}]);	
+	Route::get('',[
+		'as' => 'home_admin', 
+	    'uses' => 'Admin\AdminHomeController@index'
+	]);	
 
 	#routes profile	
 	Route::get('profile', [
