@@ -62,6 +62,11 @@ class User extends Authenticatable
         return $this->hasMany(Shopping::class, 'id_doctor');
     }
 
+    public function view_count_access()
+    {
+        return $this->hasMany(ViewCountAccess::class, 'user_id');
+    }
+
 
     /**
      * Mark the subscription as cancelled.

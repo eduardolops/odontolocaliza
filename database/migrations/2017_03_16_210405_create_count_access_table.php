@@ -13,10 +13,16 @@ class CreateCountAccessTable extends Migration
      */
     public function up()
     {
-        Schema::create('count_access', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('siteview');
+        Schema::create('view_count_access', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('user_id')->unsigned();
+            $table->unsignedBigInteger('view');
+            $table->integer('type_view')->comment('1 = pageview do dentista, 2 = view telefone do dentista');
+            $table->string('agent_name');
+            $table->ipAddress('ip');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -27,6 +33,6 @@ class CreateCountAccessTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('count_access');
+        Schema::dropIfExists('view_count_access');
     }
 }
