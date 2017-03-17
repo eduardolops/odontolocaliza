@@ -21,7 +21,7 @@ function mainBanner () {
       sliderType:"standard",
       sliderLayout:"auto",
       loops:true,
-      delay:8000,
+      delay:4000,
       navigation: {
           arrows: {
             style: "hades",

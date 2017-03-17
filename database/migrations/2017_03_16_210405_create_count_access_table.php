@@ -15,6 +15,7 @@ class CreateCountAccessTable extends Migration
     {
         Schema::create('count_access', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('siteview');
             $table->timestamps();
         });
     }
