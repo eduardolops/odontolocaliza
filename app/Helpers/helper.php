@@ -70,3 +70,8 @@ function convertTypeStatus($status)
 
     return $status;
 }
+
+function countAccess()
+{
+    
+}
