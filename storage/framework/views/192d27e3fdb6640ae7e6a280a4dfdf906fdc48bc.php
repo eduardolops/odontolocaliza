@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-    <form role="form" method="POST" action="<?php echo e(url('/admin/login')); ?>">
+    <form role="form" method="POST" action="<?php echo e(url('/login')); ?>">
         <?php echo e(csrf_field()); ?>
 
         <?php if($errors->has('errors')): ?>
@@ -26,6 +26,13 @@
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">
+            <div class="col-xs-8">
+                <div class="checkbox icheck">
+                    <label>
+                      <input type="checkbox"> Lembre-me
+                    </label>
+                </div>
+            </div>
             <!-- /.col -->
             <div class="col-xs-4">
                 <button type="submit" class="btn btn-primary btn-block btn-flat" style="background-color: #25a9e0;">Logar</button>
@@ -33,5 +40,6 @@
             <!-- /.col -->
         </div>
     </form>
+    <a href="<?php echo e(url('/password/reset')); ?>">Esqueceu sua senha?</a><br>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('structures.login_template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
