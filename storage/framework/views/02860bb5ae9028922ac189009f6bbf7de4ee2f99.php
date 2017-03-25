@@ -6,7 +6,7 @@
 <!-- /.row -->
 <div class="row">
     <div class="col-xs-12">
-        <?php if(is_array($errors)): ?>
+        <?php if( is_array($errors) ): ?>
             <div class="alert alert-danger">
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <?php $__currentLoopData = $errors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $k => $v): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
@@ -15,6 +15,7 @@
 
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+                <br>
                 <p>Se você tiver alguma dúvida entre em contato conosco </p>
             </div>
         <?php endif; ?>

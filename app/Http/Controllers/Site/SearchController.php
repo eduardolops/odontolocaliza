@@ -14,6 +14,7 @@ use Doctor\Models\ContentInfoComplementary;
 use Doctor\Http\Requests\SearchRequest;
 
 use SEO;
+use CountAccess;
 
 class SearchController extends Controller
 {
@@ -137,6 +138,8 @@ class SearchController extends Controller
                 ];
             endif;
         }
+
+        CountAccess::create( $doctor->id, 1 );
 
         SEO::setTitle($page_title);
         SEO::opengraph()->setUrl( url()->current() );

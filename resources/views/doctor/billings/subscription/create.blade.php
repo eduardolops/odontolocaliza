@@ -16,6 +16,7 @@
                         {!! 'Erro: '. $k .' '.$erro. '<br>' !!}
                     @endforeach
                 @endforeach
+                <br>
                 <p>Se você tiver alguma dúvida entre em contato conosco </p>
             </div>
         @endif

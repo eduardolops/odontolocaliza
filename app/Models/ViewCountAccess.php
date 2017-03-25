@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ViewCountAccess extends Model
 {
+    protected $table = 'view_count_access';
  	 /**
      * The attributes that are mass assignable.
      *
