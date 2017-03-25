@@ -149,4 +149,11 @@ class SearchController extends Controller
         
         return view('layout.pages.single', compact('doctor', 'specializations', 'convenants_accepts', 'geo', 'complementaries', 'page_title', 'links', 'gallery'));
     }
+
+    public function phone($user_id)
+    {
+      $doctor = $this->user->find($user_id);
+      $count  = CountAccess::create( $doctor->id, 2 );
+      return 1;
+    }
 }

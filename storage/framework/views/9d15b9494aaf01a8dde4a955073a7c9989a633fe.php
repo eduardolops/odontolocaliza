@@ -47,6 +47,38 @@
                             </p>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 style="margin-bottom:-13px">Estatísticas de Acesso do seu Perfil</h4>
+                            <hr>
+                        </div>
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3><?php echo e($totalView['viewPage']); ?></h3>
+                                        
+                                    <p>Perfil Visializado</p>
+                                </div>
+                                <div class="icon" >
+                                    <i class="fa fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3><?php echo e($totalView['viewPhone']); ?></h3>
+                                        
+                                    <p>Telefone Visializado</p>
+                                </div>
+                                <div class="icon" >
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -5,9 +5,11 @@
  *	 all routes on the doctor adm
  **************************************/
 
-$this->get('',['as' => 'home_doctor', function(){
-	return view('doctor.home.index_home', ['page_title' => 'Página Incial', 'guard' => 'web']);
-}]);
+# Home Doctor
+$this->get('',[
+    'as' => 'home_doctor', 
+    'uses' => 'Doctor\DoctorHomeController@index'
+]); 
 
 # routes profile
 $this->get('profile', [

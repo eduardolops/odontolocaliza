@@ -88,10 +88,15 @@
 						<?php echo $complement; ?>
 
 						<p><i class="fa fa-calendar"></i> Horário de Atendimento: <?php echo $doctor->office_hours; ?></p>
-						<p class="destaque">
-							
-							<a href="#" class="btn btn-primary btn-dentist">Ver Telefone</a>
+						<p class="destaque callMe" style="display:none;">
+							<i class="fa fa-phone"></i> <?php echo $doctor->phone; ?> &nbsp&nbsp
+							<i class="fa fa-mobile"></i> <?php echo $doctor->cell_phone; ?>
+
+							<span class="reference text-danger">Ao ligar, diga que viu na <strong>Odontolocaliza</strong></span>
 						</p>
+						<div style="margin-top: 10px">
+							<a href="javascript:void(0);" class="btn btn-primary btn-dentist" id="phone-view" data-id="<?php echo $doctor->id; ?>"><i class="fa fa-phone"></i> Ver Telefone</a>
+						</div>
 					</div>
 				</div>
 				<div class="row">

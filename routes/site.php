@@ -14,6 +14,7 @@ $this->post('contato', 'Site\ContactController@store')->name('contact_store');
 # Search doctor
 $this->get('search', 'Site\SearchController@search')->name('search_doctor');
 $this->get('dentista/{state}/{city}/{dentist}', 'Site\SearchController@single')->name('single_doctor');
+$this->get('dentista/{dentist}/phone', 'Site\SearchController@phone')->name('phone_doctor');
 
 $this->get('zip_code/{zip_code}', 'Site\SiteController@zip_code')->name('zip_code');
 $this->get('cities/{state}', 'Site\SiteController@cities')->name('cities');

@@ -65,5 +65,17 @@ $(function(){
       });
     }
     google.maps.event.addDomListener(window, 'load', initMap);
+
+    $('#phone-view').on('click', function(){
+        $(this).fadeOut("fast",function(){
+            $(this).remove();
+            var dentist = $(this).data('id');
+            var uri = '/dentista/' + dentist + '/phone';
+            $.get(uri, function(data){
+                console.log(data);
+            });
+            $(".callMe").fadeIn('fast');
+        });
+    });
 });
 
