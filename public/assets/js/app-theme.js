@@ -72,9 +72,10 @@ $(function(){
             var dentist = $(this).data('id');
             var uri = '/dentista/' + dentist + '/phone';
             $.get(uri, function(data){
-                console.log(data);
+                if( data == 1 ){
+                    $(".callMe").fadeIn('fast');
+                }
             });
-            $(".callMe").fadeIn('fast');
         });
     });
 });
