@@ -5,6 +5,8 @@ namespace Doctor\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Doctor\Http\Controllers\Controller;
 use Doctor\Models\User;
+use Doctor\Models\State;
+use Doctor\Models\City;
 
 class AdminHomeController extends Controller
 {
@@ -29,5 +31,12 @@ class AdminHomeController extends Controller
     	];
 
     	return view('admin.home.index_home', ['page_title' => 'Página Inicial', 'guard' => 'admin', 'total' => $totalDoctors]);
+    }
+
+    public function cities($state)
+    {
+        $state   = State::findOrFail($state)->uf;
+        $cities  = City::where('uf','=', $state)->get();
+        return response()->json($cities, 200);
     }
 }

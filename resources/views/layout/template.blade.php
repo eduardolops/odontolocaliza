@@ -29,7 +29,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/subscription-pricing.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/animate.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom/multiple-select.css') }}">
 
     <!--[if lt IE 9]>

@@ -24,7 +24,7 @@ class PaymentController extends Controller
       $user  = auth()->guard($guard)->user();
       $plans = $this->plan->all(); 
       $subscription = $this->doctor->findOrFail($user->id)->loadSubscription();
-      
+  
       if ($subscription) {
           return view('doctor.billings.subscription.edit', compact('subscription','page_title','guard','user','plans'));
       } else {
@@ -36,8 +36,16 @@ class PaymentController extends Controller
     {
       $plan   = $this->plan->findOrFail($request->get('plan'))->identifier;
       $doctor = $this->doctor->findOrFail($request->get('user'));
-      $doctor->subscribe($plan);
-      $subscription = $doctor->loadSubscription();
+      $subscribe = $doctor->subscribe($plan);
+      
+      if( is_array($subscribe) ){
+        $guard = 'web';
+        $page_title = 'Assinatura';
+        $plans = $this->plan->all(); 
+        $errors = $subscribe;
+        
+        return view('doctor.billings.subscription.create', compact('page_title','plans','guard', 'errors'));
+      }
 
       return redirect()->route('billings');
     }

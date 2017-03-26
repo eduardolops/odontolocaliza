@@ -10,12 +10,16 @@ function geoLocationLatLog($address)
 	$geocode = file_get_contents($url);
     $output  = json_decode($geocode);
 
-    $geo = [
+    if( $output->status == 'OK' ):
+        $geo = [
                 'lat'  => $output->results[0]->geometry->location->lat,
                 'long' => $output->results[0]->geometry->location->lng,
         ];
+        
+        return $geo;
+    endif;
 
-    return $geo;
+    return false;
 }
 
 function giveLastParam($input)

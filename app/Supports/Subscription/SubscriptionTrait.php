@@ -109,7 +109,7 @@ trait SubscriptionTrait
             ]);
 
             if (isset($customer->errors)) {
-                return false;
+                return $customer;
             }
 
             if ($customer) {
@@ -133,7 +133,12 @@ trait SubscriptionTrait
         if (!$this->hasSubscriptionId()) {
 
             if (!$this->hasCustomerId()) {
-                $this->createCustomerId();
+                
+                $customer = $this->createCustomerId();
+                if( isset($customer->errors) ):
+                    return $customer->errors;
+                endif;
+
             }
 
             if (in_array($plan, $this->validPlans())) {

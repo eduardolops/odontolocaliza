@@ -181,7 +181,9 @@ return [
         Doctor\Providers\AuthServiceProvider::class,
         // Doctor\Providers\BroadcastServiceProvider::class,
         Doctor\Providers\EventServiceProvider::class,
-        Doctor\Providers\RouteServiceProvider::class
+        Doctor\Providers\RouteServiceProvider::class,
+        Doctor\Providers\HelperServiceProvider::class,
+        Doctor\Providers\CountAccessServiceProvider::class
 
     ],
 
@@ -235,9 +237,10 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Curl' => Ixudra\Curl\Facades\Curl::class,
-        'ZipCode'   => Canducci\ZipCode\Facades\ZipCode::class,
-        'Address'   => Canducci\ZipCode\Facades\ZipCodeAddress::class,
-        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'ZipCode'     => Canducci\ZipCode\Facades\ZipCode::class,
+        'Address'     => Canducci\ZipCode\Facades\ZipCodeAddress::class,
+        'SEO'         => Artesaos\SEOTools\Facades\SEOTools::class,
+        'CountAccess' => Doctor\Facades\CountAccess::class,
         
     ],
 

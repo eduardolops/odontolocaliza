@@ -24,8 +24,9 @@ class DoctorController extends Controller
     {
         $doctor  = Auth::user();
         $page_title = 'Meus Dados';
+        $stateDoctor = State::find($doctor->states)->uf;
         $states  = State::orderBy('name', 'asc')->get();
-        $cities  = City::all();
+        $cities  = City::where('uf', $stateDoctor)->get();
         $guard   = 'web';
         return view('doctor.profile.index', compact('page_title', 'doctor', 'states', 'cities', 'guard'));
     }
