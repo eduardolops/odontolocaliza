@@ -8,6 +8,18 @@
 <!-- /.row -->
 <div class="row">
     <div class="col-xs-12">
+        @if ( is_array($errors) )
+            <div class="alert alert-danger">
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                @foreach($errors as $k => $v)
+                    @foreach($v as $erro)
+                        {!! 'Erro: '. $k .' '.$erro. '<br>' !!}
+                    @endforeach
+                @endforeach
+                <br>
+                <p>Se você tiver alguma dúvida entre em contato conosco </p>
+            </div>
+        @endif
         <div class="box">
             <div class="row" style="margin-top:30px">
                 <div class="block">

@@ -36,6 +36,7 @@
                                     <button type="submit" class="btn btn-success">Enviar Imagem</button>
                                 </div>
                             </div>
+                            <p class="text-danger" style="margin:10px 0">Faça o upload de uma imagem com as dimensões de (<b>575x360</b>) para melhor visualização.</p>
                             @if (count($errors) > 0)
                                 @php 
                                     $error = $errors->all();

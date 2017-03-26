@@ -52,9 +52,10 @@ class DoctorsController extends Controller
     	endif;
 
     	$guard   = 'admin';
-    	$states  = State::orderBy('name', 'asc')->get();
-        $cities  = City::all();
     	$doctor  = $this->doctor->findOrFail($id);
+        $states  = State::orderBy('name', 'asc')->get();
+        $stateDoctor = State::find($doctor->states)->uf;
+        $cities  = City::where('uf', $stateDoctor)->get();
     	$page_title = 'Dr(a): '. title_case($doctor->name);
     	return view('admin.doctors.update',compact('page_title', 'doctor', 'states', 'cities', 'guard'));	
     }

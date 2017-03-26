@@ -14,6 +14,7 @@ use Doctor\Models\ContentInfoComplementary;
 use Doctor\Http\Requests\SearchRequest;
 
 use SEO;
+use CountAccess;
 
 class SearchController extends Controller
 {
@@ -138,6 +139,8 @@ class SearchController extends Controller
             endif;
         }
 
+        CountAccess::create( $doctor->id, 1 );
+
         SEO::setTitle($page_title);
         SEO::opengraph()->setUrl( url()->current() );
         SEO::setCanonical( url()->current() );
@@ -145,5 +148,12 @@ class SearchController extends Controller
                         ->addImage(['url' => asset('storage/images/doctor/profile/'.$doctor->thumb)]); 
         
         return view('layout.pages.single', compact('doctor', 'specializations', 'convenants_accepts', 'geo', 'complementaries', 'page_title', 'links', 'gallery'));
+    }
+
+    public function phone($user_id)
+    {
+      $doctor = $this->user->find($user_id);
+      $count  = CountAccess::create( $doctor->id, 2 );
+      return 1;
     }
 }
