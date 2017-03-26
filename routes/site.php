@@ -23,9 +23,3 @@ $this->get('cities/{state}', 'Site\SiteController@cities')->name('cities');
 $this->get('assinar','Site\RegisterDoctorController@sign')->name('sign');
 $this->get('registrar','Site\RegisterDoctorController@register')->name('register');
 $this->post('register','Site\RegisterDoctorController@store')->name('doctor.store');
-
-# Search cro
-// Route::post('search/cro', [
-//     'as' => 'doctor.search_cro',
-//     'uses' => 'Site\SiteController@searchCRO'
-// ]);

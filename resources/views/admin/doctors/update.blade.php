@@ -156,7 +156,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     {!! Form::label('states', 'Estado') !!}
-                                    <select name="states" class="form-control">
+                                    <select name="states" class="form-control" id="state">
                                         <option value="">-- Selecione --</option>
                                         @foreach($states as $state)
                                             <option value="{!! $state->id !!}" {!! $state->id == $doctor->states ? 'selected' : '' !!}>{!! $state->name !!}</option>
@@ -168,7 +168,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     {!! Form::label('city', 'Cidade') !!}
-                                    <select name="city" class="form-control">
+                                    <select name="city" class="form-control" id="city">
                                         <option value="">-- Selecione --</option>
                                         @foreach($cities as $city)
                                             <option value="{!! $city->id !!}" {!! $city->id == $doctor->city ? 'selected' : '' !!}>{!! $city->name !!}</option>

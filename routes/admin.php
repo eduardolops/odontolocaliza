@@ -9,6 +9,7 @@
 $this->get('/login', 'Admin\AdminController@login');
 $this->post('/login', 'Admin\AdminController@store');
 $this->post('/login/logout', 'Admin\AdminController@logout');
+$this->get('/cities/{state}', 'Admin\AdminHomeController@cities');
 
 $this->group(['middleware' => ['auth:admin']], function(){
 	# Home Admin

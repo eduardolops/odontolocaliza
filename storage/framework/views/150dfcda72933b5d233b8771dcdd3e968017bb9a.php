@@ -190,7 +190,7 @@
                                 <div class="col-md-6">
                                     <?php echo Form::label('states', 'Estado'); ?>
 
-                                    <select name="states" class="form-control">
+                                    <select name="states" class="form-control" id="state">
                                         <option value="">-- Selecione --</option>
                                         <?php $__currentLoopData = $states; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $state): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
                                             <option value="<?php echo $state->id; ?>" <?php echo $state->id == $doctor->states ? 'selected' : ''; ?>><?php echo $state->name; ?></option>
@@ -203,7 +203,7 @@
                                 <div class="col-md-6">
                                     <?php echo Form::label('city', 'Cidade'); ?>
 
-                                    <select name="city" class="form-control">
+                                    <select name="city" class="form-control" id="city">
                                         <option value="">-- Selecione --</option>
                                         <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
                                             <option value="<?php echo $city->id; ?>" <?php echo $city->id == $doctor->city ? 'selected' : ''; ?>><?php echo $city->name; ?></option>
