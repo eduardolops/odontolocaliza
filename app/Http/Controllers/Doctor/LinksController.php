@@ -16,7 +16,7 @@ class LinksController extends Controller
 
  	function __construct(User $doctor, Link $link)
  	{
-        $this->middleware('whichPlanSubscription');
+        // $this->middleware('whichPlanSubscription');
  		$this->doctor = $doctor;
  		$this->link   = $link;
  	}

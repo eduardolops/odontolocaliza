@@ -24,7 +24,7 @@ trait SubscriptionTrait
      */
     public function validPlans()
     {
-        return ['plano_basico', 'plano_premium'];
+        return ['P1', 'P3', 'P6'];
     }
 
     /**

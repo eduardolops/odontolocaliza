@@ -27,22 +27,22 @@
 		            		<span>Dados Complementáres</span>
 		            	</a>
 		            </li>
-                    @if( auth()->guard('web')->user()->whichIsPlan() == 'plano_premium' )
+                    {{-- @if( auth()->guard('web')->user()->whichIsPlan() == 'plano_premium' ) --}}
                     <li>
                         <a href="{!! route('doctor::links') !!}">
                             <span>Links Úteis</span>
                         </a>
                     </li>
-                    @endif
+                    {{-- @endif --}}
                 </ul>
             </li>
-            @if( auth()->guard('web')->user()->whichIsPlan() == 'plano_premium' )
+            {{-- @if( auth()->guard('web')->user()->whichIsPlan() == 'plano_premium' ) --}}
                 <li>
                 	<a href="{!! route('doctor::gallery') !!}">
                 		<span><i class="fa fa-picture-o"></i> Galeria de Imagens</span>
                 	</a>
                 </li>
-            @endif
+            {{-- @endif --}}
             <li>
             	<a href="{!! route('billings') !!}">
             		<span><i class="fa fa-credit-card"></i> Minha Assinatura</span>

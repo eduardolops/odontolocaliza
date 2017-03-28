@@ -1,6 +1,4 @@
-@extends('layout.template')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <!-- ========================== Innaer Banner ========================= -->
 <section id="inner_banner">
@@ -9,10 +7,10 @@
 			<h3>Sou Dentista</h3>
 			<ul>
 				<li>
-					<a href="{!! url('login') !!}" class="btn button btn-block" style="color:#fff !important">Logar no Painel</a>
+					<a href="<?php echo url('login'); ?>" class="btn button btn-block" style="color:#fff !important">Logar no Painel</a>
 				</li>
 				<li>
-					<a href="{!! route('register') !!}" class="btn button btn-block" style="color:#fff !important">Quero me Cadastrar</a>
+					<a href="<?php echo route('register'); ?>" class="btn button btn-block" style="color:#fff !important">Quero me Cadastrar</a>
 				</li>
 			</ul>
 		</div>
@@ -29,7 +27,7 @@
         <div class="col-md-10 col-md-offset-1 text-center">
             <div class="col-md-4 col-sm-4">
                 <div class="col-md-12">
-                    <img src="{{ asset('images/step-1.png') }}" alt="" class="img-responsive img">
+                    <img src="<?php echo e(asset('images/step-1.png')); ?>" alt="" class="img-responsive img">
                 </div>
                 <div class="col-md-12 bg-blue-light">
                     <div class="pad">
@@ -40,7 +38,7 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="col-md-12">
-                    <img src="{{ asset('images/step-2.png') }}" alt="" class="img-responsive img">
+                    <img src="<?php echo e(asset('images/step-2.png')); ?>" alt="" class="img-responsive img">
                 </div>
                 <div class="col-md-12 bg-blue-light">
                     <div class="pad">
@@ -51,7 +49,7 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="col-md-12">
-                    <img src="{{ asset('images/step-3.png') }}" alt="" class="img-responsive img">
+                    <img src="<?php echo e(asset('images/step-3.png')); ?>" alt="" class="img-responsive img">
                 </div>
                 <div class="col-md-12 bg-blue-light">
                     <div class="pad">
@@ -72,7 +70,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-4">
-                <a href="{!! route('register') !!}" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
+                <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
             </div>
         </div>
     </div>
@@ -92,7 +90,7 @@
                         </h4>
                     </div>
                     <div class="col-md-10 col-md-offset-1">
-                        <img src="{{ asset('images/img-google.png') }}" alt="" class="img-responsive">
+                        <img src="<?php echo e(asset('images/img-google.png')); ?>" alt="" class="img-responsive">
                     </div> 
                 </div>
             </div>
@@ -110,7 +108,7 @@
                     <div class="col-md-4 col-sm-6 ">
                             <ul class="pricing">
                                 <li class="bg-blue-light">
-                                    <big>{{ title_case($plans[0]->name) }}</big>
+                                    <big><?php echo e(title_case($plans[0]->name)); ?></big>
                                 </li>
                                 <li>
                                     Dados de localização e contato
@@ -128,18 +126,18 @@
                                     Link para site
                                 </li>
                                 <li class="bg-white" style="padding: 21.5px">
-                                    <h3 class="blue-light">R$ {{ number_format($plans[0]->price, 2, ',', '') }}</h3>
+                                    <h3 class="blue-light">R$ <?php echo e(number_format($plans[0]->price, 2, ',', '')); ?></h3>
                                     <span>por mês</span>
                                 </li>
                                 <li class="bg-white">
-                                    <a href="{!! route('register') !!}" class="btn btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
+                                    <a href="<?php echo route('register'); ?>" class="btn btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
                                 </li>
                             </ul>
                     </div>
                     <div class="col-md-4 col-sm-6">
                             <ul class="pricing">
                                 <li class="bg-blue-light">
-                                    <big>{{ title_case($plans[1]->name) }}</big>
+                                    <big><?php echo e(title_case($plans[1]->name)); ?></big>
                                 </li>
                                <li>
                                     Dados de localização e contato
@@ -158,18 +156,18 @@
                                 </li>
                                 <li class="bg-white">
                                     <p style="margin-left:-80px; margin-bottom: -10px; font-size:13px">De <span style="text-decoration: line-through; ">R$ 104,70</span></p>
-                                    <h3 class="blue-light">R$ {{ number_format($plans[1]->price, 2, ',', '') }}</h3>
+                                    <h3 class="blue-light">R$ <?php echo e(number_format($plans[1]->price, 2, ',', '')); ?></h3>
                                     <span>10% desconto</span>
                                 </li>
                                 <li class="bg-white">
-                                    <a href="{!! route('register') !!}" class="btn btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
+                                    <a href="<?php echo route('register'); ?>" class="btn btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
                                 </li>
                             </ul>
                     </div>
                     <div class="col-md-4 col-sm-6">
                             <ul class="pricing">
                                 <li class="bg-blue-light">
-                                    <big>{{ title_case($plans[2]->name) }}</big>
+                                    <big><?php echo e(title_case($plans[2]->name)); ?></big>
                                 </li>
                                <li>
                                     Dados de localização e contato
@@ -188,11 +186,11 @@
                                 </li>
                                 <li class="bg-white">
                                     <p style="margin-left:-80px; margin-bottom: -10px; font-size:13px">De <span style="text-decoration: line-through; ">R$ 209,40</span></p>
-                                    <h3 class="blue-light">R$ {{ number_format($plans[2]->price, 2, ',', '') }}</h3>
+                                    <h3 class="blue-light">R$ <?php echo e(number_format($plans[2]->price, 2, ',', '')); ?></h3>
                                     <span>20% desconto</span>
                                 </li>
                                 <li class="bg-white">
-                                    <a href="{!! route('register') !!}" class="btn btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
+                                    <a href="<?php echo route('register'); ?>" class="btn btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
                                 </li>
                             </ul>
                     </div>
@@ -219,10 +217,11 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-4">
-                <a href="{!! route('register') !!}" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
+                <a href="<?php echo route('register'); ?>" class="btn btn-green btn-lg btn-block">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
             </div>
         </div>
     </div>
 </section>
 
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
