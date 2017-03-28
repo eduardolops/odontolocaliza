@@ -67,7 +67,7 @@
     <div class="container">
         <div class="title">
             <h3>
-                CADASTRE-SE E EXPERIMENTE POR <strong class="blue-light">10 DIAS GRÁTIS</strong> SEM CUSTO ALGUM, APÓS O TÉRMINO DO TESTE SE DESEJADO ATIVE SEU PLANO.
+                CADASTRE-SE E EXPERIMENTE POR <strong class="blue-light">10 DIAS GRÁTIS</strong> SEM CUSTO ALGUM, APÓS O TÉRMINO DO TESTE ATIVE SEU PLANO.
             </h3>
         </div>
         <div class="row">
@@ -189,7 +189,7 @@
                                 <li class="bg-white">
                                     <p style="margin-left:-80px; margin-bottom: -10px; font-size:13px">De <span style="text-decoration: line-through; ">R$ 209,40</span></p>
                                     <h3 class="blue-light">R$ {{ number_format($plans[2]->price, 2, ',', '') }}</h3>
-                                    <span>20% desconto</span>
+                                    <span>15% desconto</span>
                                 </li>
                                 <li class="bg-white">
                                     <a href="{!! route('register') !!}" class="btn btn-pricing">EXPERIMENTE POR 10 DIAS GRÁTIS</a>
@@ -214,7 +214,7 @@
     <div class="container">
         <div class="title">
             <h3>
-                CADASTRE-SE E EXPERIMENTE POR <strong class="blue-light">10 DIAS GRÁTIS</strong> SEM CUSTO ALGUM, APÓS O TÉRMINO DO TESTE SE DESEJADO ATIVE SEU PLANO.
+                CADASTRE-SE E EXPERIMENTE POR <strong class="blue-light">10 DIAS GRÁTIS</strong> SEM CUSTO ALGUM, APÓS O TÉRMINO DO TESTE ATIVE SEU PLANO.
             </h3>
         </div>
         <div class="row">

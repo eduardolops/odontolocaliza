@@ -123,7 +123,7 @@
                                     <li class="bg-white">
                                         <p style="margin-left:-80px; margin-bottom:-20px; font-size:13px">De <span style="text-decoration: line-through; ">R$ 209,40</span></p>
                                         <h3 class="blue-light">R$ <?php echo e(number_format($plans[2]->price, 2, ',', '')); ?></h3>
-                                        <span>20% desconto</span>
+                                        <span>15% desconto</span>
                                     </li>
                                     <li class="bg-white">
                                         <form role="form" method="post" action="<?php echo e(route('billings.subscription')); ?>">
