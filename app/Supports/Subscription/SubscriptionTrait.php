@@ -21,13 +21,13 @@ trait SubscriptionTrait
      * @todo move plans to configuration
      *
      * @return array List of valid plan identifiers
-     * plano_basico => mensal
-     * plano_premium => trimestral
+     * plano_premium => mensal
+     * plano_trimestral => trimestral
      * plano_semestral => semestral
      */
     public function validPlans()
     {
-        return ['plano_basico', 'plano_premium', 'plano_semestral'];
+        return ['plano_premium', 'plano_trimestral', 'plano_semestral'];
     }
 
     /**
