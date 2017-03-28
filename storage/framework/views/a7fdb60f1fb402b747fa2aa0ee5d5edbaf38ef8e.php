@@ -8,43 +8,43 @@
                 <a href="#"> <i class="fa fa-users"></i><span>Meus Dados</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li>
-		            	<a href="{!! route('doctor::profile') !!}">
+		            	<a href="<?php echo route('doctor::profile'); ?>">
 		            		<span>Dados Pessoais</span>
 		            	</a>
 		            </li>
 		            <li>
-		            	<a href="{!! route('doctor::spealizations') !!}">
+		            	<a href="<?php echo route('doctor::spealizations'); ?>">
 		            		<span>Minhas Especialidades</span>
 		            	</a>
 		            </li>
 		            <li>
-		            	<a href="{!! route('doctor::convenant') !!}">
+		            	<a href="<?php echo route('doctor::convenant'); ?>">
 		            		<span>Convênios Odontológicos Aceitos</span>
 		            	</a>
 		            </li>
 		            <li>
-		            	<a href="{!! route('doctor::complementary') !!}">
+		            	<a href="<?php echo route('doctor::complementary'); ?>">
 		            		<span>Dados Complementáres</span>
 		            	</a>
 		            </li>
-                    {{-- @if( auth()->guard('web')->user()->whichIsPlan() == 'plano_premium' ) --}}
+                    
                     <li>
-                        <a href="{!! route('doctor::links') !!}">
+                        <a href="<?php echo route('doctor::links'); ?>">
                             <span>Links Úteis</span>
                         </a>
                     </li>
-                    {{-- @endif --}}
+                    
                 </ul>
             </li>
-            {{-- @if( auth()->guard('web')->user()->whichIsPlan() == 'plano_premium' ) --}}
+            
                 <li>
-                	<a href="{!! route('doctor::gallery') !!}">
+                	<a href="<?php echo route('doctor::gallery'); ?>">
                 		<span><i class="fa fa-picture-o"></i> Galeria de Imagens</span>
                 	</a>
                 </li>
-            {{-- @endif --}}
+            
             <li>
-            	<a href="{!! route('billings') !!}">
+            	<a href="<?php echo route('billings'); ?>">
             		<span><i class="fa fa-credit-card"></i> Minha Assinatura</span>
             	</a>
             </li>

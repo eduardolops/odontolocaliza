@@ -18,7 +18,7 @@ class GalleryImageController extends Controller
 
    	function __construct(User $user, Image $image)
    	{
-   		$this->middleware('whichPlanSubscription');
+   		// $this->middleware('whichPlanSubscription');
    		$this->doctor = $user;
    		$this->image  = $image;
    	}

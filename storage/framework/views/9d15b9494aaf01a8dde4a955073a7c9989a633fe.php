@@ -1,30 +1,31 @@
-@extends('structures.admin_template')
+<?php $__env->startSection('sidebar'); ?>
+    <?php echo $__env->make('doctor.menu_adm', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
 
-@section('sidebar')
-    @include('doctor.menu_adm')
-@stop
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="row">
         <div class="col-md-12">
-            @if (session('status'))
+            <?php if(session('status')): ?>
                 <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    {{ session('status') }}
+                    <?php echo e(session('status')); ?>
+
                 </div>
-            @endif
-            @if (session('error'))
+            <?php endif; ?>
+            <?php if(session('error')): ?>
                 <div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    {{ session('error') }}
+                    <?php echo e(session('error')); ?>
+
                 </div>
-            @endif
-            @if (session('warning'))
+            <?php endif; ?>
+            <?php if(session('warning')): ?>
                 <div class="alert alert-warning">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    {{ session('warning') }}
+                    <?php echo e(session('warning')); ?>
+
                 </div>
-            @endif
+            <?php endif; ?>
             
             <!-- general form elements -->
             <div class="box box-primary">
@@ -55,7 +56,7 @@
                             <!-- small box -->
                             <div class="small-box bg-aqua">
                                 <div class="inner">
-                                    <h3>{{ $totalView['viewPage'] }}</h3>
+                                    <h3><?php echo e($totalView['viewPage']); ?></h3>
                                         
                                     <p>Perfil Visualizado</p>
                                 </div>
@@ -68,7 +69,7 @@
                             <!-- small box -->
                             <div class="small-box bg-green">
                                 <div class="inner">
-                                    <h3>{{ $totalView['viewPhone'] }}</h3>
+                                    <h3><?php echo e($totalView['viewPhone']); ?></h3>
                                         
                                     <p>Telefone Visualizado</p>
                                 </div>
@@ -83,4 +84,5 @@
 
         </div>
     </div>
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('structures.admin_template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
