@@ -30,73 +30,111 @@
                             ATIVE SEU PLANO APÓS O PERÍODO DE TESTE PARA FAZER PARTE DO MELHOR PORTAL ODONTOLÓGICO DO BRASIL.
                         </h4>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-md-offset-2">
-                            <ul class="pricing p-blue">
-                                <li class="bg-blue-light">
-                                    <big><?php echo e(title_case($plans[0]->name)); ?></big>
-                                </li>
-                                <li>
-                                    Dados de localização e contato
-                                </li>
-                                <li>
-                                    Áreas de atuação
-                                </li>
-                                <li>
-                                    Foto ilustrativa
-                                </li>
-                                <li>
-                                    Qualificações
-                                </li>
-                                <li>
-                                    Convênios
-                                </li>
-                                <li class="bg-white">
-                                    <h3 class="blue-light">R$ <?php echo e(number_format($plans[0]->price, 2, ',', '')); ?></h3>
-                                    <span>por mês</span>
-                                </li>
-                                <li class="bg-white">
-                                    <form role="form" method="post" action="<?php echo e(route('billings.subscription')); ?>">
-                                        <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
-                                        <input type="hidden" name="user" value="<?php echo e(Auth::guard($guard)->user()->id); ?>">
-                                        <input type="hidden" name="plan" value="<?php echo e($plans[0]->id); ?>">
-                                        <button type="submit">EXPERIMENTE POR 10 DIAS GRÁTIS</button>
-                                    </form>
-                                </li>
-                            </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                            <ul class="pricing p-blue">
-                                <li class="bg-blue-light">
-                                    <big><?php echo e(title_case($plans[1]->name)); ?></big>
-                                </li>
-                               <li>
-                                    Dados de localização e contato
-                                </li>
-                                <li>
-                                    Áreas de atuação
-                                </li>
-                                <li>
-                                    Foto ilustrativa + 5 fotos adicionais
-                                </li>
-                                <li>
-                                    Qualificações e Convênios
-                                </li>
-                                <li>
-                                    Link para site
-                                </li>
-                                <li class="bg-white">
-                                    <h3 class="blue-light">R$ <?php echo e(number_format($plans[1]->price, 2, ',', '')); ?></h3>
-                                    <span>por mês</span>
-                                </li>
-                                <li class="bg-white">
-                                    <form role="form" method="post" action="<?php echo e(route('billings.subscription')); ?>">
-                                        <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
-                                        <input type="hidden" name="user" value="<?php echo e(Auth::guard($guard)->user()->id); ?>">
-                                        <input type="hidden" name="plan" value="<?php echo e($plans[1]->id); ?>">
-                                        <button type="submit">EXPERIMENTE POR 10 DIAS GRÁTIS</button>
-                                    </form>
-                                </li>
-                            </ul>
+                    <div class="col-md-12">
+                        <div class="col-md-4 col-sm-6 ">
+                                <ul class="pricing p-blue">
+                                    <li class="bg-blue-light">
+                                        <big><?php echo e(title_case($plans[0]->name)); ?></big>
+                                    </li>
+                                    <li>
+                                        Dados de localização e contato
+                                    </li>
+                                    <li>
+                                        Áreas de atuação
+                                    </li>
+                                    <li>
+                                        Foto ilustrativa + 5 fotos adicionais
+                                    </li>
+                                    <li>
+                                        Qualificações e Convênios
+                                    </li>
+                                    <li>
+                                        Link para site
+                                    </li>
+                                    <li class="bg-white" style="padding:12.5px">
+                                        <h3 class="blue-light">R$ <?php echo e(number_format($plans[0]->price, 2, ',', '')); ?></h3>
+                                        <span>por mês</span>
+                                    </li>
+                                    <li class="bg-white">
+                                        <form role="form" method="post" action="<?php echo e(route('billings.subscription')); ?>">
+                                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                                            <input type="hidden" name="user" value="<?php echo e(Auth::guard($guard)->user()->id); ?>">
+                                            <input type="hidden" name="plan" value="<?php echo e($plans[0]->id); ?>">
+                                            <button type="submit">EXPERIMENTE POR 10 DIAS GRÁTIS</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                                <ul class="pricing p-blue">
+                                    <li class="bg-blue-light">
+                                        <big><?php echo e(title_case($plans[1]->name)); ?></big>
+                                    </li>
+                                   <li>
+                                        Dados de localização e contato
+                                    </li>
+                                    <li>
+                                        Áreas de atuação
+                                    </li>
+                                    <li>
+                                        Foto ilustrativa + 5 fotos adicionais
+                                    </li>
+                                    <li>
+                                        Qualificações e Convênios
+                                    </li>
+                                    <li>
+                                        Link para site
+                                    </li>
+                                    <li class="bg-white">
+                                        <p style="margin-left:-80px; margin-bottom:-20px; font-size:13px">De <span style="text-decoration: line-through; ">R$ 104,70</span></p>
+                                        <h3 class="blue-light">R$ <?php echo e(number_format($plans[1]->price, 2, ',', '')); ?></h3>
+                                        <span>10% desconto</span>
+                                    </li>
+                                    <li class="bg-white">
+                                        <form role="form" method="post" action="<?php echo e(route('billings.subscription')); ?>">
+                                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                                            <input type="hidden" name="user" value="<?php echo e(Auth::guard($guard)->user()->id); ?>">
+                                            <input type="hidden" name="plan" value="<?php echo e($plans[1]->id); ?>">
+                                            <button type="submit">EXPERIMENTE POR 10 DIAS GRÁTIS</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                                <ul class="pricing p-blue">
+                                    <li class="bg-blue-light">
+                                        <big><?php echo e(title_case($plans[2]->name)); ?></big>
+                                    </li>
+                                   <li>
+                                        Dados de localização e contato
+                                    </li>
+                                    <li>
+                                        Áreas de atuação
+                                    </li>
+                                    <li>
+                                        Foto ilustrativa + 5 fotos adicionais
+                                    </li>
+                                    <li>
+                                        Qualificações e Convênios
+                                    </li>
+                                    <li>
+                                        Link para site
+                                    </li>
+                                    <li class="bg-white">
+                                        <p style="margin-left:-80px; margin-bottom:-20px; font-size:13px">De <span style="text-decoration: line-through; ">R$ 209,40</span></p>
+                                        <h3 class="blue-light">R$ <?php echo e(number_format($plans[2]->price, 2, ',', '')); ?></h3>
+                                        <span>20% desconto</span>
+                                    </li>
+                                    <li class="bg-white">
+                                        <form role="form" method="post" action="<?php echo e(route('billings.subscription')); ?>">
+                                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                                            <input type="hidden" name="user" value="<?php echo e(Auth::guard($guard)->user()->id); ?>">
+                                            <input type="hidden" name="plan" value="<?php echo e($plans[1]->id); ?>">
+                                            <button type="submit">EXPERIMENTE POR 10 DIAS GRÁTIS</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                        </div>
                     </div>
                 </div><!-- /block -->
             </div><!-- /row -->

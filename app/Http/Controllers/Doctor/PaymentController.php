@@ -25,11 +25,11 @@ class PaymentController extends Controller
       $plans = $this->plan->all(); 
       $subscription = $this->doctor->findOrFail($user->id)->loadSubscription();
   
-      if ($subscription) {
-          return view('doctor.billings.subscription.edit', compact('subscription','page_title','guard','user','plans'));
-      } else {
+      // if ($subscription) {
+          // return view('doctor.billings.subscription.edit', compact('subscription','page_title','guard','user','plans'));
+      // } else {
           return view('doctor.billings.subscription.create', compact('page_title','plans','guard'));
-      }
+      // }
     }
 
     public function store(Request $request)

@@ -205,8 +205,8 @@
                             </h4>
                         </div>
                     </div>
-                </div>
-            </div><!-- /block -->
+                </div><!-- /block -->
+            </div><!-- /col-md-12 -->
         </div><!-- /row -->
     </div>
 </section>
