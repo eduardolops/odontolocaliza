@@ -28,7 +28,7 @@
                             APROVEITE O TESTE <strong class="blue-light">GRÁTIS POR 10 DIAS</strong>. 
                         </h4>
                         <h4>
-                            ATIVE SEU PLANO APÓS O PERÍODO DE TESTE PARA FAZER PARTE DO MELHOR PORTAL ODONTOLÓGICO DO BRASIL.
+                            ATIVE SEU PLANO APÓS O PERÍODO DE TESTE, PARA FAZER PARTE DO MELHOR PORTAL ODONTOLÓGICO DO BRASIL.
                         </h4>
                     </div>
                     <div class="col-md-12">
