@@ -57,7 +57,6 @@
                                 </a>
                                 {!! Form::open([ 'route' => ['admin::admin.destroy', $admin->id], 'id' => 'plan.destroy.'.$admin->id, 'method' => 'delete' ]) !!}
                                 {!! Form::close() !!}
-                                </form>
                             </td>
                         </tr>
                     @empty
